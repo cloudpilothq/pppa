@@ -1,10 +1,11 @@
 import { db } from "@/lib/db";
 import { UserCheck } from "lucide-react";
+import { Leadership } from "@prisma/client";
 
 export const dynamic = 'force-dynamic';
 
 export default async function LeadershipPage() {
-  let leaders = [];
+  let leaders: Leadership[] = [];
   try {
     leaders = await db.leadership.findMany({
       orderBy: { order: 'asc' }

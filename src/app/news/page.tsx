@@ -1,11 +1,14 @@
 import { db } from "@/lib/db";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react"; 
 import Link from "next/link";
+import { News } from "@prisma/client";
 
 export const dynamic = 'force-dynamic';
 
+
+
 export default async function NewsPage() {
-  let news = [];
+  let news: News[] = [];
   try {
     news = await db.news.findMany({
       orderBy: { createdAt: 'desc' },
@@ -44,7 +47,7 @@ export default async function NewsPage() {
                         <div className="w-full h-full bg-slate-100"></div>
                       )}
                       <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
-                         <Calendar className="h-3 w-3" />
+                         <span>📅</span>
                          {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(item.createdAt)}
                       </div>
                    </div>
@@ -56,7 +59,7 @@ export default async function NewsPage() {
                          {item.summary}
                       </p>
                       <div className="mt-auto flex items-center text-emerald-600 text-sm font-semibold">
-                         Read Article <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                         Read Article <span className="ml-2 transform group-hover:translate-x-1 transition-transform inline-block">→</span>
                       </div>
                    </div>
                 </div>

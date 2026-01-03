@@ -1,4 +1,5 @@
-import { db } from "@/lib/db";
+// TEMPORARILY DISABLED FOR DEPLOYMENT
+// import { db } from "@/lib/db";
 import { createNews, createLeader, deleteNews, deleteLeader } from "@/actions/admin";
 import { logoutAction } from "@/actions/auth";
 import { requireAdmin } from "@/lib/auth";
@@ -10,15 +11,16 @@ export default async function AdminPage() {
   // Protect this route
   await requireAdmin();
 
+  // TEMPORARILY DISABLED FOR DEPLOYMENT
   let news: any[] = [];
   let leaders: any[] = [];
   
-  try {
-    news = await db.news.findMany({ orderBy: { createdAt: 'desc' } });
-    leaders = await db.leadership.findMany({ orderBy: { order: 'asc' } });
-  } catch (e) {
-    console.log("DB Error in admin:", e);
-  }
+  // try {
+  //   news = await db.news.findMany({ orderBy: { createdAt: 'desc' } });
+  //   leaders = await db.leadership.findMany({ orderBy: { order: 'asc' } });
+  // } catch (e) {
+  //   console.log("DB Error in admin:", e);
+  // }
 
   return (
     <div className="bg-slate-50 min-h-screen">
