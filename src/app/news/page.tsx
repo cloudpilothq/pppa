@@ -3,11 +3,19 @@ import Link from "next/link";
 
 export const dynamic = 'force-dynamic';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
+
 export default async function NewsPage() {
-  // Static fallback data or empty array since Prisma is removed
   let news: any[] = [];
-
-
+  
+  try {
+    const res = await fetch(`${API_URL}/news`, { next: { revalidate: 60 } });
+    if (res.ok) {
+      news = await res.json();
+    }
+  } catch (error) {
+    console.error("Failed to fetch news from Laravel API", error);
+  }
   return (
     <div className="bg-background min-h-screen py-16">
       <div className="container mx-auto px-4">
@@ -36,7 +44,7 @@ export default async function NewsPage() {
                       )}
                       <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-slate-800 flex items-center gap-1">
                          <span>📅</span>
-                         {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(item.createdAt)}
+                         {new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(item.created_at))}
                       </div>
                    </div>
                    <div className="p-6 flex-1 flex flex-col">

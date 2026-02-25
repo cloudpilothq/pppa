@@ -37,6 +37,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-emerald-400 transition-colors flex items-center gap-2">About Agency</Link></li>
               <li><Link href="/leadership" className="hover:text-emerald-400 transition-colors flex items-center gap-2">Leadership</Link></li>
               <li><Link href="/news" className="hover:text-emerald-400 transition-colors flex items-center gap-2">Press Releases</Link></li>
+              <li><Link href="/faq" className="hover:text-emerald-400 transition-colors flex items-center gap-2">FAQ</Link></li>
             </ul>
           </div>
 

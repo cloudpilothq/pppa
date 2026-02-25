@@ -67,6 +67,7 @@ export function Header() {
               <Link href="/rights" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Your Rights</Link>
               <Link href="/leadership" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Leadership</Link>
               <Link href="/news" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>News</Link>
+              <Link href="/faq" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>FAQ</Link>
               <Link href="/contact" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Contact</Link>
             </nav>
             <div className="pt-4 border-t border-slate-100">

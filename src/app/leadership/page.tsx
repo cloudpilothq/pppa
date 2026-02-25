@@ -2,11 +2,19 @@ import { UserCheck } from "lucide-react";
 
 export const dynamic = 'force-dynamic';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
+
 export default async function LeadershipPage() {
-  // Static fallback data or empty array since Prisma is removed
   let leaders: any[] = [];
 
-
+  try {
+    const res = await fetch(`${API_URL}/leaderships`, { next: { revalidate: 60 } });
+    if (res.ok) {
+      leaders = await res.json();
+    }
+  } catch (error) {
+    console.error("Failed to fetch leadership from Laravel API", error);
+  }
   return (
     <div className="bg-background min-h-screen py-16">
       <div className="container mx-auto px-4">

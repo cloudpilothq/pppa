@@ -1,39 +1,38 @@
 "use client";
 
 import { useState } from 'react';
-import { Shield, AlertTriangle, Upload, MapPin, CheckCircle, Send, FileText, Camera } from "lucide-react";
+import { Shield, AlertTriangle, Upload, MapPin, CheckCircle, Send, FileText, Camera, Info, HelpCircle } from "lucide-react";
 
 export default function ReportPage() {
-  const [isAnonymous, setIsAnonymous] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate submission
-    setSubmitted(true);
+    setTimeout(() => setSubmitted(true), 1500);
   };
 
   if (submitted) {
     return (
-        <div className="bg-background min-h-screen pb-16">
+        <div className="bg-slate-50 min-h-screen pb-16">
             <div className="relative bg-slate-900 text-white py-24 overflow-hidden mb-16">
                  {/* Background Effects */}
                 <div className="absolute inset-0 z-0">
-                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
+                  <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+                  <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+                  <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
                 </div>
-                 <div className="container mx-auto px-4 text-center relative z-10">
-                    <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-emerald-500/20">
-                        <CheckCircle className="h-10 w-10 text-white" />
+                 <div className="container mx-auto px-4 text-center relative z-10 animate-in fade-in zoom-in duration-500">
+                    <div className="w-24 h-24 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-emerald-500/20">
+                        <CheckCircle className="h-12 w-12 text-white" />
                     </div>
-                    <h1 className="text-4xl font-extrabold mb-4">Report Submitted Successfully</h1>
-                    <p className="text-xl text-slate-300 max-w-xl mx-auto mb-8">
-                        Thank you for helping us protect national integrity. Your case ID is <span className="text-white font-mono bg-slate-800 px-2 py-1 rounded">#RPT-2026-8842</span>.
+                    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-200">Report Submitted</h1>
+                    <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                        Your complaint has been submitted. Thank you for reporting this to us. A member of our team will be in touch shortly.
                     </p>
                     <button 
                         onClick={() => setSubmitted(false)}
-                        className="inline-flex items-center justify-center px-6 py-3 text-base font-bold text-slate-900 bg-white rounded-lg hover:bg-slate-100 transition-all"
+                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-all shadow-xl active:scale-95"
                     >
                         Submit Another Report
                     </button>
@@ -44,199 +43,214 @@ export default function ReportPage() {
   }
 
   return (
-    <div className="bg-background min-h-screen pb-16">
+    <div className="bg-slate-50 min-h-screen pb-24">
       {/* Hero Header */}
-      <div className="relative bg-slate-900 text-white py-24 overflow-hidden mb-16">
+      <div className="relative bg-slate-900 text-white py-24 mb-16 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-orange-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-orange-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-900/30 border border-red-500/30 text-red-400 text-sm font-medium backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-900/40 border border-red-500/30 text-red-400 text-sm font-medium backdrop-blur-sm mb-6">
             <AlertTriangle className="h-4 w-4" />
-            <span>Confidential Channel</span>
+            <span>Formal Complaints Channel</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Report an Incident</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Report property violations, land grabbing, or title fraud secure and confidentiality. Action will be taken immediately.
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+            File a Complaint
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            If you are experiencing harassment, illegal levies, forceful entry, or any other form of unlawful interference with your property or development activities, PPPPA is here to help. Use the form below to submit a formal complaint and our team will respond promptly.
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+            
+            {/* Sidebar Guidelines */}
+            <div className="lg:col-span-1 space-y-8 order-2 lg:order-1">
+                <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 sticky top-8">
+                    <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                      <HelpCircle className="h-6 w-6 text-emerald-600" />
+                      What You Can Report
+                    </h3>
+                    <ul className="space-y-4 mb-10 text-slate-600">
+                        <li className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <span className="leading-snug">Illegal &lsquo;deve&rsquo; levies or demands for unauthorised payments at a construction site</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <span className="leading-snug">Forceful or unlawful entry into your property or development site</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <span className="leading-snug">Illegal occupation of land or buildings</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <span className="leading-snug">Harassment, threats, or intimidation of developers, workers, or property owners</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <span className="leading-snug">Vandalism or theft at a development site</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <span className="leading-snug">Fraudulent or deceptive land practices</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <span className="leading-snug">Any other unlawful disruption of legitimate construction or development activity</span>
+                        </li>
+                    </ul>
+
+                    <hr className="border-slate-100 my-8" />
+
+                    <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                      <Info className="h-6 w-6 text-blue-600" />
+                      What Happens Next
+                    </h3>
+                    <div className="space-y-4 text-slate-600 leading-relaxed text-sm bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                      <p>
+                        Once your complaint is received, a member of the PPPPA team will review it and contact you to confirm receipt and advise on next steps. Where urgent intervention is required, the Agency will coordinate with relevant security agencies to respond as quickly as possible.
+                      </p>
+                      <p className="font-semibold text-slate-800">
+                        All complaints are handled with confidentiality and in accordance with the law.
+                      </p>
+                    </div>
+                </div>
+            </div>
+
             {/* Form Section */}
-            <div className="lg:col-span-2">
-                <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
-                    <div className="p-1 bg-gradient-to-r from-red-500 to-orange-500"></div>
-                    <form onSubmit={handleSubmit} className="p-8">
+            <div className="lg:col-span-2 order-1 lg:order-2">
+                <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
+                    <div className="h-2 bg-gradient-to-r from-red-500 via-orange-500 to-amber-500"></div>
+                    
+                    <form onSubmit={handleSubmit} className="p-8 md:p-12">
                         
-                        <div className="flex items-center gap-4 p-4 bg-amber-50 border border-amber-200 rounded-lg text-amber-800 text-sm mb-8">
-                            <AlertTriangle className="h-5 w-5 shrink-0" />
-                            <p>For emergencies threatening life or peace, please call <strong>+234 800 555 0199</strong> immediately.</p>
+                        <div className="flex items-center gap-4 p-5 bg-amber-50 border border-amber-200 rounded-2xl text-amber-900 text-sm mb-10 shadow-sm">
+                            <AlertTriangle className="h-6 w-6 shrink-0 text-amber-600" />
+                            <p className="leading-snug">
+                                For emergencies involving immediate threats to life or safety, do not use this form. Please contact local security agencies instantly.
+                            </p>
                         </div>
 
-                        <div className="space-y-8">
-                            {/* Incident Details */}
+                        <div className="space-y-12">
+                            {/* Personal Details */}
                             <section>
-                                <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                                    <FileText className="h-5 w-5 text-slate-400" />
-                                    Incident Details
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
+                                    <Shield className="h-6 w-6 text-slate-400" />
+                                    Your Information
                                 </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">Violation Type</label>
-                                        <select className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all appearance-none bg-white">
-                                            <option>Select Category...</option>
-                                            <option>Land Grabbing / Encroachment</option>
-                                            <option>Illegal Construction</option>
-                                            <option>Title Fraud / Forgery</option>
-                                            <option>Public Land Violation</option>
-                                            <option>Other</option>
-                                        </select>
+                                    <div className="col-span-1 md:col-span-2 space-y-2">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Full Name</label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">Date of Incident</label>
-                                        <input type="date" className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" />
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Phone Number</label>
+                                        <input required type="tel" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email Address</label>
+                                        <input required type="email" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
                                     </div>
                                     <div className="col-span-1 md:col-span-2 space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">Description</label>
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Your Address or Location</label>
+                                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium text-sm" placeholder="Where can we reach you physically, if necessary?" />
+                                    </div>
+                                </div>
+                            </section>
+
+                            {/* Complaint Details */}
+                            <section>
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
+                                    <FileText className="h-6 w-6 text-slate-400" />
+                                    Complaint Details
+                                </h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="col-span-1 md:col-span-2 space-y-2">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Type of Complaint</label>
+                                        <div className="relative">
+                                          <select required className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium appearance-none">
+                                              <option value="">Select Category...</option>
+                                              <option>Illegal Levy</option>
+                                              <option>Forceful Entry</option>
+                                              <option>Illegal Occupation</option>
+                                              <option>Harassment or Intimidation</option>
+                                              <option>Vandalism or Theft</option>
+                                              <option>Fraudulent Land Practice</option>
+                                              <option>Other</option>
+                                          </select>
+                                          <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-500">
+                                              <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-span-1 md:col-span-2 space-y-2">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Location of Incident</label>
+                                        <div className="relative">
+                                          <input required type="text" className="w-full pl-11 pr-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" placeholder="Street, Landmark, LGA, State..." />
+                                          <MapPin className="h-5 w-5 text-slate-400 absolute left-4 top-3.5" />
+                                        </div>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Date of Incident</label>
+                                        <input required type="date" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium text-slate-600" />
+                                    </div>
+                                    <div className="col-span-1 md:col-span-2 space-y-2">
+                                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Description of Incident</label>
                                         <textarea 
-                                            rows={4} 
-                                            className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all resize-none"
-                                            placeholder="Please describe what happened, providing as much detail as possible..."
+                                            required
+                                            rows={5} 
+                                            className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium resize-none leading-relaxed"
+                                            placeholder="Please describe exactly what happened, who was involved, and any other relevant details..."
                                         ></textarea>
                                     </div>
                                 </div>
                             </section>
 
-                            <hr className="border-slate-100" />
-
-                            {/* Location */}
-                            <section>
-                                <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                                    <MapPin className="h-5 w-5 text-slate-400" />
-                                    Location
-                                </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">State</label>
-                                        <select className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all bg-white">
-                                            <option>Select State...</option>
-                                            <option>Abuja (FCT)</option>
-                                            <option>Lagos</option>
-                                            {/* Add more */}
-                                        </select>
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">LGA / Area</label>
-                                        <input type="text" placeholder="e.g. Gwarimpa" className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" />
-                                    </div>
-                                    <div className="col-span-1 md:col-span-2 space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">Address / Common Landmark</label>
-                                        <input type="text" placeholder="Street name, near [Landmark], etc." className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" />
-                                    </div>
-                                </div>
-                            </section>
-
-                            <hr className="border-slate-100" />
-
                             {/* Evidence */}
                             <section>
-                                <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                                    <Camera className="h-5 w-5 text-slate-400" />
-                                    Evidence (Optional)
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2 border-b border-slate-100 pb-4">
+                                    <Camera className="h-6 w-6 text-slate-400" />
+                                    Supporting Documents
                                 </h3>
-                                <div className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center hover:bg-slate-50 transition-colors cursor-pointer">
-                                    <Upload className="h-8 w-8 text-slate-400 mx-auto mb-2" />
-                                    <p className="text-sm text-slate-600 font-medium">Click to upload photos, videos, or documents</p>
-                                    <p className="text-xs text-slate-400 mt-1">MP4, JPG, PNG, PDF up to 10MB</p>
+                                <div className="border-2 border-dashed border-slate-300 rounded-2xl p-10 text-center hover:bg-slate-50 hover:border-slate-400 transition-all cursor-pointer group">
+                                    <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                      <Upload className="h-8 w-8 text-slate-500" />
+                                    </div>
+                                    <p className="text-base text-slate-700 font-medium mb-1">Click to upload photos, videos, or documents</p>
+                                    <p className="text-sm text-slate-500">Supported formats: JPG, PNG, PDF, MP4 (Max: 20MB)</p>
                                 </div>
                             </section>
 
-                            <hr className="border-slate-100" />
+                            {/* Confirmation */}
+                            <div className="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                              <input 
+                                required
+                                type="checkbox" 
+                                id="confirm" 
+                                className="w-5 h-5 text-red-600 rounded border-slate-300 focus:ring-red-500 mt-1 cursor-pointer shrink-0"
+                              />
+                              <label htmlFor="confirm" className="text-sm font-medium text-slate-700 leading-relaxed cursor-pointer select-none">
+                                I confirm that the information provided above is true and accurate to the best of my knowledge.
+                              </label>
+                            </div>
 
-                            {/* Reporter Info */}
-                            <section>
-                                <div className="flex items-center justify-between mb-4">
-                                    <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                                        <Shield className="h-5 w-5 text-slate-400" />
-                                        Your Details
-                                    </h3>
-                                    <div className="flex items-center gap-2">
-                                        <input 
-                                            type="checkbox" 
-                                            id="anonymous" 
-                                            checked={isAnonymous}
-                                            onChange={(e) => setIsAnonymous(e.target.checked)}
-                                            className="w-4 h-4 text-red-600 rounded border-slate-300 focus:ring-red-500"
-                                        />
-                                        <label htmlFor="anonymous" className="text-sm font-medium text-slate-700 select-none cursor-pointer">Submit Anonymously</label>
-                                    </div>
-                                </div>
-                                <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-300 ${isAnonymous ? 'opacity-50 pointer-events-none grayscale' : ''}`}>
-                                    <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">Full Name</label>
-                                        <input type="text" disabled={isAnonymous} className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" />
-                                    </div>
-                                    <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">Phone Number</label>
-                                        <input type="tel" disabled={isAnonymous} className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" />
-                                    </div>
-                                    <div className="col-span-1 md:col-span-2 space-y-2">
-                                        <label className="block text-sm font-medium text-slate-700">Email Address</label>
-                                        <input type="email" disabled={isAnonymous} className="w-full p-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition-all" />
-                                    </div>
-                                </div>
-                            </section>
-
-                            <button type="submit" className="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl shadow-lg shadow-red-500/30 transition-all active:scale-[0.99] flex items-center justify-center gap-2">
+                            <button type="submit" className="w-full py-5 bg-red-600 hover:bg-red-700 text-white text-lg font-bold rounded-2xl shadow-xl shadow-red-600/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+                                Submit Complaint
                                 <Send className="h-5 w-5" />
-                                Submit Report
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            {/* Sidebar Guide */}
-            <div className="space-y-6">
-                <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-lg">
-                    <h3 className="text-lg font-bold mb-4">Process Timeline</h3>
-                    <div className="space-y-6 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-700">
-                        <div className="relative pl-10">
-                            <div className="absolute left-0 top-0 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center border-4 border-slate-900 text-xs font-bold">1</div>
-                            <h4 className="font-bold text-red-400">Submission</h4>
-                            <p className="text-sm text-slate-400 mt-1">Report follows secure encryption protocols to our database.</p>
-                        </div>
-                         <div className="relative pl-10">
-                            <div className="absolute left-0 top-0 w-6 h-6 bg-slate-700 rounded-full flex items-center justify-center border-4 border-slate-900 text-xs font-bold">2</div>
-                            <h4 className="font-bold">Initial Review</h4>
-                            <p className="text-sm text-slate-400 mt-1">Officers verify details within 48 hours for validity.</p>
-                        </div>
-                         <div className="relative pl-10">
-                            <div className="absolute left-0 top-0 w-6 h-6 bg-slate-700 rounded-full flex items-center justify-center border-4 border-slate-900 text-xs font-bold">3</div>
-                            <h4 className="font-bold">Investigation</h4>
-                            <p className="text-sm text-slate-400 mt-1">Field agents dispatched to verify location and claims.</p>
-                        </div>
-                         <div className="relative pl-10">
-                            <div className="absolute left-0 top-0 w-6 h-6 bg-slate-700 rounded-full flex items-center justify-center border-4 border-slate-900 text-xs font-bold">4</div>
-                            <h4 className="font-bold">Enforcement</h4>
-                            <p className="text-sm text-slate-400 mt-1">Legal action or mediation initiated based on findings.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">Privacy Guarantee</h3>
-                    <p className="text-sm text-slate-600">
-                        Your data is protected by the Data Protection Act. Anonymous reports are stripped of all digital identifiers before processing.
-                    </p>
-                </div>
-            </div>
         </div>
       </div>
     </div>

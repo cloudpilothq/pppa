@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Shield, Globe, Users, FileText } from "lucide-react";
+import { ArrowRight, Shield, Globe, Users, FileText, Scale, Search, HardHat, TrendingUp } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -19,7 +19,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm mx-auto mb-6">
               <Shield className="h-4 w-4" />
-              <span>Official Property Protection Agency</span>
+              <span>Official Public and Private Property Protection Agency (PPPPA)</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
@@ -28,8 +28,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              We protect public and private property rights through transparency,
-              accountability, and rigorous enforcement.
+              The Delta State Public and Private Property Protection Agency (PPPPA) safeguard your right to develop, invest, and build — free from illegal levies, harassment, and unlawful interference.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
@@ -137,10 +136,10 @@ export default function HomePage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Property Rights</span>
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                The Private Public Property Protection Agency (PPPA) was established to serve as the unified body for regulating, verifying, and protecting property interests across the nation.
+                PPPPA is a Delta State Government agency established to enforce the Delta State Public and Private Properties Protection Law, 2018.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                We operate with transparency and rigorous enforcement to ensure every citizen's right to own and secure property is respected.
+                We exist to ensure that every developer, landowner, and investor in Delta State can carry out lawful activities in peace — without fear of extortion, illegal occupation, or intimidation.
               </p>
               <Link 
                 href="/about" 
@@ -150,6 +149,64 @@ export default function HomePage() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-emerald-600 font-bold tracking-wider text-sm uppercase mb-2 block">Feature Tiles</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">What We Do</h2>
+            <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full mb-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Enforce Property Law",
+                icon: Scale,
+                desc: "We enforce all relevant laws protecting public and private property across Delta State, removing illegal barriers and holding violators accountable.",
+                color: "text-emerald-600",
+                bg: "bg-emerald-50",
+                border: "hover:border-emerald-500/30",
+              },
+              {
+                title: "Investigate Complaints",
+                icon: Search,
+                desc: "We provide a formal, accessible channel for individuals, businesses, and government bodies to report property violations and receive a lawful response.",
+                color: "text-blue-600",
+                bg: "bg-blue-50",
+                border: "hover:border-blue-500/30",
+              },
+              {
+                title: "Protect Development Sites",
+                icon: HardHat,
+                desc: "We work with security agencies to protect construction sites from illegal entry, occupation, vandalism, and extortion practices such as “deve” levies.",
+                color: "text-amber-600",
+                bg: "bg-amber-50",
+                border: "hover:border-amber-500/30",
+              },
+              {
+                title: "Support Investment",
+                icon: TrendingUp,
+                desc: "By creating a safe, predictable environment for development, we help attract investment, reduce project costs, and support Delta State’s economic growth.",
+                color: "text-indigo-600",
+                bg: "bg-indigo-50",
+                border: "hover:border-indigo-500/30",
+              },
+            ].map((feature, idx) => (
+              <div key={idx} className={`bg-white rounded-2xl p-8 border border-slate-200 ${feature.border} hover:shadow-xl transition-all duration-300 group`}>
+                <div className={`w-14 h-14 rounded-xl ${feature.bg} ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="h-7 w-7" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-sm">
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -204,6 +261,36 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Do You Need Protection or <br className="hidden md:block" />
+              <span className="text-emerald-400">Want to Report a Violation?</span>
+            </h2>
+            <p className="text-xl text-slate-300 mb-10 leading-relaxed">
+              Whether you are a property owner, developer, or investor, PPPPA is here to help. Reach out to us today or file a complaint using our formal process.
+            </p>
+            <div className="flex justify-center">
+              <Link
+                href="/report"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-emerald-600 rounded-lg hover:bg-emerald-500 transition-all shadow-lg hover:shadow-emerald-500/25 active:scale-95 transform group"
+              >
+                File a Complaint
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
