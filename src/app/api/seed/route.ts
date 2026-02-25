@@ -1,5 +1,4 @@
 // TEMPORARILY DISABLED FOR DEPLOYMENT
-// import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 

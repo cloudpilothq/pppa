@@ -1,6 +1,6 @@
 "use server";
 
-import { db } from "@/lib/db";
+// Prisma removed
 import { createSession, logout } from "@/lib/auth";
 import bcrypt from "bcryptjs";
 import { redirect } from "next/navigation";
@@ -13,24 +13,15 @@ export async function loginAction(prevState: any, formData: FormData) {
     return { error: "Please provide both email and password." };
   }
 
-  // Find user
-  const user = await db.user.findUnique({
-    where: { email },
-  });
-
-  if (!user) {
-    return { error: "Invalid credentials." };
+  // Mock user authentication without a database
+  const isMockUser = email === "admin@example.com" && password === "password123";
+  
+  if (!isMockUser) {
+    return { error: "Invalid credentials. Use admin@example.com / password123" };
   }
 
-  // Check password
-  const isValid = await bcrypt.compare(password, user.password);
-
-  if (!isValid) {
-    return { error: "Invalid credentials." };
-  }
-
-  // Create session
-  await createSession(user.id, user.role);
+  // Create session with mock user ID
+  await createSession("mock-user-id", "ADMIN");
 
   redirect("/admin");
 }

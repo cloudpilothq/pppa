@@ -1,19 +1,11 @@
-import { db } from "@/lib/db";
 import { UserCheck } from "lucide-react";
-import { Leadership } from "@prisma/client";
 
 export const dynamic = 'force-dynamic';
 
 export default async function LeadershipPage() {
-  let leaders: Leadership[] = [];
-  try {
-    leaders = await db.leadership.findMany({
-      orderBy: { order: 'asc' }
-    });
-  } catch (error) {
-    console.error("Database error:", error);
-    leaders = []; 
-  }
+  // Static fallback data or empty array since Prisma is removed
+  let leaders: any[] = [];
+
 
   return (
     <div className="bg-background min-h-screen py-16">

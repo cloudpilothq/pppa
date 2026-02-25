@@ -1,5 +1,4 @@
 // TEMPORARILY DISABLED FOR DEPLOYMENT
-// import { db } from "@/lib/db";
 import { createNews, createLeader, deleteNews, deleteLeader } from "@/actions/admin";
 import { logoutAction } from "@/actions/auth";
 import { requireAdmin } from "@/lib/auth";

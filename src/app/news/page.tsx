@@ -1,24 +1,12 @@
-import { db } from "@/lib/db";
 import { Calendar, ArrowRight } from "lucide-react"; 
 import Link from "next/link";
-import { News } from "@prisma/client";
 
 export const dynamic = 'force-dynamic';
 
-
-
 export default async function NewsPage() {
-  let news: News[] = [];
-  try {
-    news = await db.news.findMany({
-      orderBy: { createdAt: 'desc' },
-      where: { published: true }
-    });
-  } catch (error) {
-    console.error("Database connection failed, using generic fallback:", error);
-    // Fallback data so the site doesn't look broken during dev issues
-    news = []; 
-  }
+  // Static fallback data or empty array since Prisma is removed
+  let news: any[] = [];
+
 
   return (
     <div className="bg-background min-h-screen py-16">
