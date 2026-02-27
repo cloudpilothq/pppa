@@ -1,66 +1,90 @@
-import { UserCheck } from "lucide-react";
+import { UserCheck, ShieldCheck, Award, Briefcase } from "lucide-react";
 
-export const dynamic = 'force-dynamic';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000/api";
-
-export default async function LeadershipPage() {
-  let leaders: any[] = [];
-
-  try {
-    const res = await fetch(`${API_URL}/leaderships`, { next: { revalidate: 60 } });
-    if (res.ok) {
-      leaders = await res.json();
-    }
-  } catch (error) {
-    console.error("Failed to fetch leadership from Laravel API", error);
+const DEMO_LEADERS = [
+  {
+    id: 1,
+    name: "Dr. Emmanuel Okonji",
+    role: "Director General",
+    bio: "Dr. Okonji brings over 20 years of experience in public administration and property law. He leads the PPPPA with a vision of a secure, transparent, and legally compliant property sector in Delta State. Under his leadership, the agency has significantly reduced land-related disputes and illegal levies.",
+    icon: <ShieldCheck className="h-16 w-16" />
+  },
+  {
+    id: 2,
+    name: "Barrister Aisha Bello",
+    role: "Head of Legal & Enforcement",
+    bio: "A seasoned property rights lawyer, Barrister Bello oversees the agency's enforcement actions. She works closely with state security agencies to ensure that violations like 'deve' collections and forceful entries are met with swift judicial action.",
+    icon: <Award className="h-16 w-16" />
+  },
+  {
+    id: 3,
+    name: "Engr. David Omatseye",
+    role: "Director of Field Operations",
+    bio: "Engr. Omatseye coordinates the on-ground task forces deployed across Warri, Asaba, and other key development hubs. His expertise in construction and site management ensures that field operations are handled professionally and safely.",
+    icon: <Briefcase className="h-16 w-16" />
+  },
+  {
+    id: 4,
+    name: "Mrs. Grace Nwadi",
+    role: "Head of Public Relations",
+    bio: "Mrs. Nwadi manages the agency's communications, ensuring the public is educated about their property rights. She leads community town halls and develops campaigns that encourage citizens to report unlawful disruptions.",
+    icon: <UserCheck className="h-16 w-16" />
   }
+];
+
+export default function LeadershipPage() {
   return (
-    <div className="bg-background min-h-screen py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">Agency Leadership</h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Meet the dedicated team guiding the PPPPA towards a more secure future.
-          </p>
+    <div className="bg-slate-50 min-h-screen pb-24">
+      {/* Hero Header */}
+      <div className="relative bg-slate-900 text-white py-24 mb-16 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
         </div>
 
-        {leaders.length === 0 ? (
-          <div className="text-center py-20 bg-slate-50 rounded-xl">
-            <p className="text-slate-500">Leadership profiles are currently being updated.</p>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/40 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm mb-6">
+            <UserCheck className="h-4 w-4" />
+            <span>Our Executive Team</span>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {leaders.map((leader) => (
-              <div key={leader.id} className="bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                <div className="h-64 bg-slate-200 w-full relative">
-                  {/* Placeholder for real image or next/image if exists */}
-                  {leader.image ? (
-                     // In a real app, use next/image. For this demo, using a placeholder div + name
-                     <div className="w-full h-full flex items-center justify-center bg-slate-300 text-slate-500">
-                        <UserCheck className="h-16 w-16" />
-                     </div>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-slate-300 text-slate-500">
-                        <UserCheck className="h-16 w-16" />
-                     </div>
-                  )}
-                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-slate-900/80 to-transparent p-4">
-                     <span className="text-white text-xs font-bold uppercase tracking-widest bg-emerald-600 px-2 py-1 rounded">
-                        {leader.role}
-                     </span>
-                  </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+            Agency Leadership
+          </h1>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Meet the dedicated professionals guiding the PPPPA towards a more secure, lawful, and transparent future for property development in Delta State.
+          </p>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+          {DEMO_LEADERS.map((leader) => (
+            <div key={leader.id} className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/40 border border-slate-100 hover:shadow-2xl hover:shadow-slate-200/60 transition-all group flex flex-col sm:flex-row">
+              <div className="sm:w-2/5 h-64 sm:h-auto bg-slate-100 relative overflow-hidden flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 transform group-hover:scale-105 transition-transform duration-500"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-slate-400 group-hover:text-emerald-500 transition-colors duration-300">
+                  {leader.icon}
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{leader.name}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {leader.bio}
-                  </p>
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-slate-900/90 to-transparent p-4 sm:hidden">
+                    <span className="text-white text-xs font-bold uppercase tracking-widest bg-emerald-600 px-3 py-1 rounded-lg shadow-sm">
+                      {leader.role}
+                    </span>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+              <div className="p-8 flex flex-col justify-center sm:w-3/5">
+                <div className="hidden sm:inline-block mb-3">
+                    <span className="text-emerald-700 text-xs font-bold uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-100">
+                      {leader.role}
+                    </span>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-emerald-700 transition-colors">{leader.name}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {leader.bio}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
