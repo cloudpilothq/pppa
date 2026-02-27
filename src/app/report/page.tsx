@@ -16,7 +16,7 @@ export default function ReportPage() {
     
     // ⚠️ IMPORTANT: Replace this with your actual email address.
     // FormSubmit will ask you to verify this email on the very first submission.
-    const YOUR_EMAIL = "schoolmill7@gmail.com";
+    const YOUR_EMAIL = "info@dspppa.org";
 
     try {
       const response = await fetch(`https://formsubmit.co/ajax/${YOUR_EMAIL}`, {
