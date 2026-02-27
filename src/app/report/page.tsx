@@ -5,11 +5,40 @@ import { Shield, AlertTriangle, Upload, MapPin, CheckCircle, Send, FileText, Cam
 
 export default function ReportPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate submission
-    setTimeout(() => setSubmitted(true), 1500);
+    setIsSubmitting(true);
+    
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // ⚠️ IMPORTANT: Replace this with your actual email address.
+    // FormSubmit will ask you to verify this email on the very first submission.
+    const YOUR_EMAIL = "schoolmill7@gmail.com";
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${YOUR_EMAIL}`, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json'
+        },
+        body: formData
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        alert("Oops! There was a problem submitting your report.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Oops! There was a network error submitting your report.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -131,6 +160,10 @@ export default function ReportPage() {
                     <div className="h-2 bg-gradient-to-r from-red-500 via-orange-500 to-amber-500"></div>
                     
                     <form onSubmit={handleSubmit} className="p-8 md:p-12">
+                        {/* Prevent FormSubmit Captcha */}
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_subject" value="New Complaint Report Filed" />
                         
                         <div className="flex items-center gap-4 p-5 bg-amber-50 border border-amber-200 rounded-2xl text-amber-900 text-sm mb-10 shadow-sm">
                             <AlertTriangle className="h-6 w-6 shrink-0 text-amber-600" />
@@ -149,19 +182,19 @@ export default function ReportPage() {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="col-span-1 md:col-span-2 space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Full Name</label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
+                                        <input required type="text" name="fullName" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Phone Number</label>
-                                        <input required type="tel" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
+                                        <input required type="tel" name="phone" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email Address</label>
-                                        <input required type="email" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
+                                        <input required type="email" name="email" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" />
                                     </div>
                                     <div className="col-span-1 md:col-span-2 space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Your Address or Location</label>
-                                        <input required type="text" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium text-sm" placeholder="Where can we reach you physically, if necessary?" />
+                                        <input required type="text" name="address" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium text-sm" placeholder="Where can we reach you physically, if necessary?" />
                                     </div>
                                 </div>
                             </section>
@@ -176,7 +209,7 @@ export default function ReportPage() {
                                     <div className="col-span-1 md:col-span-2 space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Type of Complaint</label>
                                         <div className="relative">
-                                          <select required className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium appearance-none">
+                                          <select required name="complaintType" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium appearance-none">
                                               <option value="">Select Category...</option>
                                               <option>Illegal Levy</option>
                                               <option>Forceful Entry</option>
@@ -194,18 +227,19 @@ export default function ReportPage() {
                                     <div className="col-span-1 md:col-span-2 space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Location of Incident</label>
                                         <div className="relative">
-                                          <input required type="text" className="w-full pl-11 pr-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" placeholder="Street, Landmark, LGA, State..." />
+                                          <input required type="text" name="incidentLocation" className="w-full pl-11 pr-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium" placeholder="Street, Landmark, LGA, State..." />
                                           <MapPin className="h-5 w-5 text-slate-400 absolute left-4 top-3.5" />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Date of Incident</label>
-                                        <input required type="date" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium text-slate-600" />
+                                        <input required type="date" name="incidentDate" className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium text-slate-600" />
                                     </div>
                                     <div className="col-span-1 md:col-span-2 space-y-2">
                                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Description of Incident</label>
                                         <textarea 
                                             required
+                                            name="incidentDescription"
                                             rows={5} 
                                             className="w-full px-4 py-3 bg-slate-50 rounded-xl border border-slate-200 focus:bg-white focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all font-medium resize-none leading-relaxed"
                                             placeholder="Please describe exactly what happened, who was involved, and any other relevant details..."
@@ -220,7 +254,8 @@ export default function ReportPage() {
                                     <Camera className="h-6 w-6 text-slate-400" />
                                     Supporting Documents
                                 </h3>
-                                <div className="border-2 border-dashed border-slate-300 rounded-2xl p-10 text-center hover:bg-slate-50 hover:border-slate-400 transition-all cursor-pointer group">
+                                <div className="border-2 border-dashed border-slate-300 rounded-2xl p-10 text-center hover:bg-slate-50 hover:border-slate-400 transition-all cursor-pointer group relative">
+                                    <input type="file" name="evidenceAttachment" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept=".jpg,.jpeg,.png,.pdf,.mp4" />
                                     <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                                       <Upload className="h-8 w-8 text-slate-500" />
                                     </div>
@@ -242,8 +277,8 @@ export default function ReportPage() {
                               </label>
                             </div>
 
-                            <button type="submit" className="w-full py-5 bg-red-600 hover:bg-red-700 text-white text-lg font-bold rounded-2xl shadow-xl shadow-red-600/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
-                                Submit Complaint
+                            <button disabled={isSubmitting} type="submit" className="w-full py-5 bg-red-600 hover:bg-red-700 text-white text-lg font-bold rounded-2xl shadow-xl shadow-red-600/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-50 disabled:pointer-events-none">
+                                {isSubmitting ? 'Submitting...' : 'Submit Complaint'}
                                 <Send className="h-5 w-5" />
                             </button>
                         </div>
