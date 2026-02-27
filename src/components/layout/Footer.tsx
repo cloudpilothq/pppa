@@ -58,7 +58,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-4">
                 <MapPin className="h-5 w-5 text-emerald-500 mt-1 shrink-0" />
-                <span>Block B: Federal Agency, Gwarimpa<br/>Abuja, Nigeria</span>
+                <span>Plot 630 Kestin Pondi Street<br/>Off 9th Street, DDPA Housing Estate<br/>Effurun, Delta State</span>
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="h-5 w-5 text-emerald-500 shrink-0" />
@@ -66,7 +66,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="h-5 w-5 text-emerald-500 shrink-0" />
-                <span>contact@pppa.gov.ng</span>
+                <span>info@dspppa.org</span>
               </li>
             </ul>
           </div>
