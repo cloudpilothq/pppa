@@ -12,7 +12,7 @@ export function Footer() {
               <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white">
                  <Shield className="h-6 w-6" />
               </div>
-              <span>PPPPA</span>
+              <span>DSPPPPA</span>
             </Link>
             <p className="text-slate-400 leading-relaxed">
               The Official Private Public Property Protection Agency. Dedicated to safeguarding assets, ensuring public trust, and upholding property rights for all citizens.
@@ -73,7 +73,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} PPPA. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} DSPPPPA. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
@@ -83,3 +83,4 @@ export function Footer() {
     </footer>
   );
 }
+

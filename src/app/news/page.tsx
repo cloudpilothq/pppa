@@ -5,17 +5,17 @@ import { Newspaper, ArrowRight, ChevronLeft, ChevronRight, Calendar } from "luci
 import Link from "next/link";
 
 const DEMO_NEWS = [
-  { id: 1, title: "PPPPA Cracks Down on Illegal 'Deve' Collectors in Asaba", summary: "The agency successfully apprehended a syndicate posing as community youths demanding illegal development levies at a major construction site.", date: "2026-02-25", slug: "crackdown-asaba" },
-  { id: 2, title: "State Government Reiterates Zero Tolerance for Land Grabbing", summary: "During the annual property summit, the Governor emphasized that the PPPPA has full backing to prosecute land grabbers to the full extent of the law.", date: "2026-02-20", slug: "zero-tolerance" },
-  { id: 3, title: "New Taskforce Deployed to Warri Industrial Hub", summary: "To protect ongoing commercial developments, a specialized PPPPA taskforce has been permanently stationed in the Warri industrial zone.", date: "2026-02-15", slug: "warri-taskforce" },
+  { id: 1, title: "DSPPPPA Cracks Down on Illegal 'Deve' Collectors in Asaba", summary: "The agency successfully apprehended a syndicate posing as community youths demanding illegal development levies at a major construction site.", date: "2026-02-25", slug: "crackdown-asaba" },
+  { id: 2, title: "State Government Reiterates Zero Tolerance for Land Grabbing", summary: "During the annual property summit, the Governor emphasized that the DSPPPPA has full backing to prosecute land grabbers to the full extent of the law.", date: "2026-02-20", slug: "zero-tolerance" },
+  { id: 3, title: "New Taskforce Deployed to Warri Industrial Hub", summary: "To protect ongoing commercial developments, a specialized DSPPPPA taskforce has been permanently stationed in the Warri industrial zone.", date: "2026-02-15", slug: "warri-taskforce" },
   { id: 4, title: "Public Sensitization Campaign Launches Next Week", summary: "The agency is launching a statewide campaign to educate property owners on how to verify titles and report unlawful interference.", date: "2026-02-10", slug: "sensitization-campaign" },
-  { id: 5, title: "PPPPA Recovers 50 Hectares of Illegally Occupied State Land", summary: "Following a month-long investigation, the agency has successfully evicted squatters and speculators from a designated state housing estate.", date: "2026-02-05", slug: "land-recovery" },
+  { id: 5, title: "DSPPPPA Recovers 50 Hectares of Illegally Occupied State Land", summary: "Following a month-long investigation, the agency has successfully evicted squatters and speculators from a designated state housing estate.", date: "2026-02-05", slug: "land-recovery" },
   { id: 6, title: "Warning Issued to Fraudulent Real Estate Agents", summary: "The agency issues a stern warning against unauthorized agents selling properties with forged layout approvals.", date: "2026-01-28", slug: "fraudulent-agents-warning" },
   { id: 7, title: "New Director General Pledges Swift Response Times", summary: "Newly appointed DG outlines his 100-day plan, focusing on reducing complaint response times to under 24 hours.", date: "2026-01-20", slug: "dg-pledge" },
-  { id: 8, title: "PPPPA Partners with Local Security Outfits", summary: "A new MoU has been signed with local vigilante groups to provide early warnings regarding site encroachments.", date: "2026-01-15", slug: "security-partnership" },
+  { id: 8, title: "DSPPPPA Partners with Local Security Outfits", summary: "A new MoU has been signed with local vigilante groups to provide early warnings regarding site encroachments.", date: "2026-01-15", slug: "security-partnership" },
   { id: 9, title: "Digital Property Verification Portal Enters Beta", summary: "Citizens will soon be able to verify property documents online, reducing the risk of purchasing disputed lands.", date: "2026-01-10", slug: "digital-portal" },
   { id: 10, title: "Arrests Made in Multi-Million Naira Land Scam", summary: "Three individuals have been handed over to the police for orchestrating a massive land fraud scheme in Effurun.", date: "2026-01-05", slug: "land-scam-arrests" },
-  { id: 11, title: "Year in Review: PPPPA's Achievements in 2025", summary: "A comprehensive look back at the agency's successes in reducing property disputes and enforcing the law last year.", date: "2025-12-28", slug: "year-in-review-2025" },
+  { id: 11, title: "Year in Review: DSPPPPA's Achievements in 2025", summary: "A comprehensive look back at the agency's successes in reducing property disputes and enforcing the law last year.", date: "2025-12-28", slug: "year-in-review-2025" },
   { id: 12, title: "Holiday Season Security Advisory for Developers", summary: "Developers are advised to secure their sites during the festive season to prevent vandalism and theft.", date: "2025-12-15", slug: "holiday-advisory" },
 ];
 
@@ -52,7 +52,7 @@ export default function NewsPage() {
             News & Media Center
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Stay informed with the latest press releases, enforcement actions, and property safety advisories from the PPPPA.
+            Stay informed with the latest press releases, enforcement actions, and property safety advisories from the DSPPPPA.
           </p>
         </div>
       </div>
@@ -128,3 +128,4 @@ export default function NewsPage() {
     </div>
   );
 }
+

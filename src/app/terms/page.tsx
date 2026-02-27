@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - PPPPA",
+  title: "Terms of Service - DSPPPPA",
   description: "Terms of Service for the Private Public Property Protection Agency website.",
 };
 
@@ -14,7 +14,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-2xl font-semibold text-slate-900 mb-4">1. Agreement to Terms</h2>
           <p>
-            These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and the Private Public Property Protection Agency ("we", "us", or "our"), concerning your access to and use of the PPPPA website and services.
+            These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and the Private Public Property Protection Agency ("we", "us", or "our"), concerning your access to and use of the DSPPPPA website and services.
           </p>
           <p className="mt-2">
             By accessing or using the Site, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.
@@ -67,3 +67,4 @@ export default function TermsPage() {
     </div>
   );
 }
+

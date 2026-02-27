@@ -91,7 +91,7 @@ export default function ReportPage() {
             File a Complaint
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            If you are experiencing harassment, illegal levies, forceful entry, or any other form of unlawful interference with your property or development activities, PPPPA is here to help. Use the form below to submit a formal complaint and our team will respond promptly.
+            If you are experiencing harassment, illegal levies, forceful entry, or any other form of unlawful interference with your property or development activities, DSPPPPA is here to help. Use the form below to submit a formal complaint and our team will respond promptly.
           </p>
         </div>
       </div>
@@ -145,7 +145,7 @@ export default function ReportPage() {
                     </h3>
                     <div className="space-y-4 text-slate-600 leading-relaxed text-sm bg-slate-50 p-6 rounded-2xl border border-slate-100">
                       <p>
-                        Once your complaint is received, a member of the PPPPA team will review it and contact you to confirm receipt and advise on next steps. Where urgent intervention is required, the Agency will coordinate with relevant security agencies to respond as quickly as possible.
+                        Once your complaint is received, a member of the DSPPPPA team will review it and contact you to confirm receipt and advise on next steps. Where urgent intervention is required, the Agency will coordinate with relevant security agencies to respond as quickly as possible.
                       </p>
                       <p className="font-semibold text-slate-800">
                         All complaints are handled with confidentiality and in accordance with the law.
@@ -291,3 +291,4 @@ export default function ReportPage() {
     </div>
   );
 }
+

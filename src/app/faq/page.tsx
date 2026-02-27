@@ -6,16 +6,16 @@ import Link from 'next/link';
 
 const faqs = [
   {
-    question: "What is PPPPA?",
-    answer: "The Public and Private Property Protection Agency (PPPPA) is a Delta State Government agency established to protect public and private property across the state. We enforce the Delta State Public and Private Properties Protection Law, 2018, and work to ensure that all development activities take place lawfully, peacefully, and without unlawful interference."
+    question: "What is DSPPPPA?",
+    answer: "The Public and Private Property Protection Agency (DSPPPPA) is a Delta State Government agency established to protect public and private property across the state. We enforce the Delta State Public and Private Properties Protection Law, 2018, and work to ensure that all development activities take place lawfully, peacefully, and without unlawful interference."
   },
   {
-    question: "Who established PPPPA?",
-    answer: "PPPPA was established by the Delta State Government. It is empowered by law to enforce property protection regulations, investigate violations, and collaborate with security agencies and other government bodies to protect development activities across the state."
+    question: "Who established DSPPPPA?",
+    answer: "DSPPPPA was established by the Delta State Government. It is empowered by law to enforce property protection regulations, investigate violations, and collaborate with security agencies and other government bodies to protect development activities across the state."
   },
   {
-    question: "What area does PPPPA cover?",
-    answer: "PPPPA operates across all of Delta State. We have offices in both Warri and Asaba to serve residents and developers in all parts of the state."
+    question: "What area does DSPPPPA cover?",
+    answer: "DSPPPPA operates across all of Delta State. We have offices in both Warri and Asaba to serve residents and developers in all parts of the state."
   },
   {
     question: "Who can file a complaint?",
@@ -39,19 +39,19 @@ const faqs = [
   },
   {
     question: "What is a ‘deve’ levy?",
-    answer: "A ‘deve’ levy refers to an illegal, unofficial fee demanded from developers or property owners, typically at construction sites. These payments are not authorised by law and amount to extortion. If anyone is demanding such payments from you, report it to PPPPA immediately."
+    answer: "A ‘deve’ levy refers to an illegal, unofficial fee demanded from developers or property owners, typically at construction sites. These payments are not authorised by law and amount to extortion. If anyone is demanding such payments from you, report it to DSPPPPA immediately."
   },
   {
     question: "What should I do if someone demands an illegal levy from me?",
-    answer: "Do not pay. Report the incident to PPPPA as soon as possible using our complaints form or by calling our office. Where possible, document the incident with photos or a written record of what happened."
+    answer: "Do not pay. Report the incident to DSPPPPA as soon as possible using our complaints form or by calling our office. Where possible, document the incident with photos or a written record of what happened."
   },
   {
-    question: "Does PPPPA work with the police and other security agencies?",
-    answer: "Yes. PPPPA collaborates with the police and other relevant security agencies to enforce property protection laws, maintain order at development sites, and respond to violations."
+    question: "Does DSPPPPA work with the police and other security agencies?",
+    answer: "Yes. DSPPPPA collaborates with the police and other relevant security agencies to enforce property protection laws, maintain order at development sites, and respond to violations."
   },
   {
-    question: "Can PPPPA help if my construction site has been occupied illegally?",
-    answer: "Yes. Illegal occupation of a development site is one of the violations PPPPA is specifically mandated to address. File a complaint and our team will assess the situation and take the necessary enforcement action."
+    question: "Can DSPPPPA help if my construction site has been occupied illegally?",
+    answer: "Yes. Illegal occupation of a development site is one of the violations DSPPPPA is specifically mandated to address. File a complaint and our team will assess the situation and take the necessary enforcement action."
   },
   {
     question: "Where are your offices?",
@@ -173,3 +173,4 @@ export default function FAQPage() {
     </div>
   );
 }
+

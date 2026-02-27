@@ -5,7 +5,7 @@ const DEMO_LEADERS = [
     id: 1,
     name: "Dr. Emmanuel Okonji",
     role: "Director General",
-    bio: "Dr. Okonji brings over 20 years of experience in public administration and property law. He leads the PPPPA with a vision of a secure, transparent, and legally compliant property sector in Delta State. Under his leadership, the agency has significantly reduced land-related disputes and illegal levies.",
+    bio: "Dr. Okonji brings over 20 years of experience in public administration and property law. He leads the DSPPPPA with a vision of a secure, transparent, and legally compliant property sector in Delta State. Under his leadership, the agency has significantly reduced land-related disputes and illegal levies.",
     icon: <ShieldCheck className="h-16 w-16" />
   },
   {
@@ -51,7 +51,7 @@ export default function LeadershipPage() {
             Agency Leadership
           </h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Meet the dedicated professionals guiding the PPPPA towards a more secure, lawful, and transparent future for property development in Delta State.
+            Meet the dedicated professionals guiding the DSPPPPA towards a more secure, lawful, and transparent future for property development in Delta State.
           </p>
         </div>
       </div>
@@ -89,3 +89,4 @@ export default function LeadershipPage() {
     </div>
   );
 }
+

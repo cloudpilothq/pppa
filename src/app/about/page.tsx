@@ -22,7 +22,7 @@ export default function AboutPage() {
             About Us
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            The Public and Private Property Protection Agency (PPPPA) is a Delta State Government agency established to safeguard public and private property across the state.
+            The Public and Private Property Protection Agency (DSPPPPA) is a Delta State Government agency established to safeguard public and private property across the state.
           </p>
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full mb-8"></div>
           <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 text-justify text-justify-last-left">
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              The Public and Private Property Protection Agency (PPPPA) is a Delta State Government agency established to safeguard public and private property across the state and to ensure that all development activities take place lawfully, peacefully, and without unlawful interference. It is the body empowered to enforce the Delta State Public and Private Properties Protection Law, 2018.
+              The Public and Private Property Protection Agency (DSPPPPA) is a Delta State Government agency established to safeguard public and private property across the state and to ensure that all development activities take place lawfully, peacefully, and without unlawful interference. It is the body empowered to enforce the Delta State Public and Private Properties Protection Law, 2018.
             </p>
             <p className="text-lg text-slate-600 leading-relaxed">
               The Agency was created in response to persistent threats to property development in Delta State — including illegal levies commonly known as &ldquo;deve,&rdquo; forceful entry into construction sites, illegal land occupation, harassment of developers, and unlawful disruption of construction activities. These practices have long increased development costs, delayed projects, and weakened investor confidence across the state.
@@ -71,13 +71,13 @@ export default function AboutPage() {
             <div className="w-20 h-1 bg-emerald-500 rounded-full mb-8"></div>
             <div className="space-y-6 text-lg text-slate-600 leading-relaxed text-justify text-justify-last-left">
               <p>
-                PPPPA enforces property protection laws, investigates complaints, protects construction sites, and eliminates extortion practices that drive up development costs and discourage investment. The Agency provides a formal channel through which individuals, businesses, and government entities can report violations, seek protection, and obtain lawful intervention in development-related disputes.
+                DSPPPPA enforces property protection laws, investigates complaints, protects construction sites, and eliminates extortion practices that drive up development costs and discourage investment. The Agency provides a formal channel through which individuals, businesses, and government entities can report violations, seek protection, and obtain lawful intervention in development-related disputes.
               </p>
               <p>
                 We collaborate with security agencies to maintain order at development sites, work with the Ministry of Justice to ensure legal compliance and proper prosecution of offenders, and partner with traditional institutions and community leadership to prevent conflicts and promote peaceful development.
               </p>
               <p>
-                By removing illegal barriers to development and creating a secure, predictable environment for investment, PPPPA plays a central role in driving Delta State&rsquo;s economic growth — supporting infrastructure expansion, job creation, and the state&rsquo;s vision of becoming a leading commercial and industrial hub in Nigeria.
+                By removing illegal barriers to development and creating a secure, predictable environment for investment, DSPPPPA plays a central role in driving Delta State&rsquo;s economic growth — supporting infrastructure expansion, job creation, and the state&rsquo;s vision of becoming a leading commercial and industrial hub in Nigeria.
               </p>
               <p className="font-medium text-slate-800">
                 Guided by professionalism, fairness, and transparency, the Agency is committed to upholding the rule of law and ensuring that Delta State remains a place where property development can thrive in an atmosphere of peace, security, and investor confidence.
@@ -146,7 +146,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Why It Matters</h2>
             <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full mb-8"></div>
             <p className="text-xl text-slate-700 leading-relaxed font-medium text-justify text-justify-last-left">
-              By securing development sites, protecting investments, and removing illegal barriers to construction, PPPPA contributes directly to the growth of towns and cities across Delta State. Through its enforcement and protective functions, PPPPA helps establish the conditions necessary for infrastructure expansion, economic growth, job creation, and the attraction of local and external investment — supporting Delta State&rsquo;s vision of becoming a leading destination for business and development in Nigeria.
+              By securing development sites, protecting investments, and removing illegal barriers to construction, DSPPPPA contributes directly to the growth of towns and cities across Delta State. Through its enforcement and protective functions, DSPPPPA helps establish the conditions necessary for infrastructure expansion, economic growth, job creation, and the attraction of local and external investment — supporting Delta State&rsquo;s vision of becoming a leading destination for business and development in Nigeria.
             </p>
           </div>
         </section>
@@ -201,3 +201,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

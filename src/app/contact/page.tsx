@@ -60,7 +60,7 @@ export default function ContactPage() {
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">Get in Touch</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Report an issue, ask questions, or visit our regional offices to get assistance from the PPPPA team.
+            Report an issue, ask questions, or visit our regional offices to get assistance from the DSPPPPA team.
           </p>
         </div>
       </div>
@@ -219,3 +219,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

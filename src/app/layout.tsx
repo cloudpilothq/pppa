@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "PPPPA - Private Public Property Protection Agency",
+  title: "DSPPPPA - Private Public Property Protection Agency",
   description: "Official website of the Private Public Property Protection Agency. Safeguarding assets, ensuring trust.",
 };
 
@@ -28,3 +28,4 @@ export default function RootLayout({
     </html>
   );
 }
+

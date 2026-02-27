@@ -19,7 +19,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm mx-auto mb-6">
               <Shield className="h-4 w-4" />
-              <span>Official Public and Private Property Protection Agency (PPPPA)</span>
+              <span>Official Delta State Public and Private Property Protection Agency (DSPPPPA)</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
@@ -28,7 +28,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              The Delta State Public and Private Property Protection Agency (PPPPA) safeguard your right to develop, invest, and build — free from illegal levies, harassment, and unlawful interference.
+              The Delta State Public and Private Property Protection Agency (DSPPPPA) safeguard your right to develop, invest, and build — free from illegal levies, harassment, and unlawful interference.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
@@ -121,7 +121,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-4">Protecting Assets, Securing the Future.</h3>
                   <p className="text-slate-600 mb-6">
-                    From verifying land titles to mediating boundary disputes, the PPPA acts as the guardian of property rights for both citizens and the state.
+                    From verifying land titles to mediating boundary disputes, the DSPPPPA acts as the guardian of property rights for both citizens and the state.
                   </p>
                   <div className="h-1 w-full bg-slate-100 rounded-full overflow-hidden">
                     <div className="h-full w-2/3 bg-emerald-500 rounded-full"></div>
@@ -136,7 +136,7 @@ export default function HomePage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Property Rights</span>
               </h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                PPPPA is a Delta State Government agency established to enforce the Delta State Public and Private Properties Protection Law, 2018.
+                DSPPPPA is a Delta State Government agency established to enforce the Delta State Public and Private Properties Protection Law, 2018.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 We exist to ensure that every developer, landowner, and investor in Delta State can carry out lawful activities in peace — without fear of extortion, illegal occupation, or intimidation.
@@ -280,7 +280,7 @@ export default function HomePage() {
               <span className="text-emerald-400">Want to Report a Violation?</span>
             </h2>
             <p className="text-xl text-slate-300 mb-10 leading-relaxed">
-              Whether you are a property owner, developer, or investor, PPPPA is here to help. Reach out to us today or file a complaint using our formal process.
+              Whether you are a property owner, developer, or investor, DSPPPPA is here to help. Reach out to us today or file a complaint using our formal process.
             </p>
             <div className="flex justify-center">
               <Link
@@ -311,3 +311,4 @@ export default function HomePage() {
     </div>
   );
 }
+

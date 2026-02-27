@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - PPPA",
+  title: "Privacy Policy - DSPPPPA",
   description: "Privacy Policy for the Private Public Property Protection Agency website.",
 };
 
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-2xl font-semibold text-slate-900 mb-4">1. Introduction</h2>
           <p>
-            The Private Public Property Protection Agency ("PPPA", "we", "us", or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+            The Private Public Property Protection Agency ("DSPPPPA", "we", "us", or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
           </p>
         </section>
 
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
             <p className="font-semibold text-slate-900">Data Protection Officer</p>
             <p>Private Public Property Protection Agency</p>
             <p>Block B: Federal Agency, Gwarimpa, Abuja, Nigeria</p>
-            <p>Email: privacy@pppa.gov.ng</p>
+            <p>Email: privacy@DSPPPPA.gov.ng</p>
             <p>Phone: +234 800 555 0199</p>
           </div>
         </section>
@@ -67,3 +67,4 @@ export default function PrivacyPage() {
     </div>
   );
 }
+

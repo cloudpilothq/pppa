@@ -38,7 +38,7 @@ const servicesData: Record<string, {
     title: "Boundary Dispute Resolution",
     icon: Gavel,
     description: "Mediation services for boundary conflicts between private entities or public bodies.",
-    longDescription: "Land disputes are a leading cause of conflict. The PPPPA offers an impartial, Alternative Dispute Resolution (ADR) mechanism to settle boundary disagreements without expensive litigation. Our team of surveyors and legal experts works to re-establish proper boundary lines based on the original master plan.",
+    longDescription: "Land disputes are a leading cause of conflict. The DSPPPPA offers an impartial, Alternative Dispute Resolution (ADR) mechanism to settle boundary disagreements without expensive litigation. Our team of surveyors and legal experts works to re-establish proper boundary lines based on the original master plan.",
     keyFeatures: [
       "Professional Land Surveying",
       "Legal Mediation Sessions",
@@ -48,7 +48,7 @@ const servicesData: Record<string, {
     process: [
       { title: "Petition", desc: "File a dispute petition providing details of the encroaching party." },
       { title: "Notice", desc: "We serve an official notice to all parties involved." },
-      { title: "Joint Inspection", desc: "Surveyors from both sides meet with PPPPA officials on-site." },
+      { title: "Joint Inspection", desc: "Surveyors from both sides meet with DSPPPPA officials on-site." },
       { title: "Resolution", desc: "A final boundary determination is issued and pegged." }
     ],
     ctaLink: "/report",
@@ -146,12 +146,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!service) {
     return {
-      title: "Service Not Found - PPPA",
+      title: "Service Not Found - DSPPPPA",
     };
   }
 
   return {
-    title: `${service.title} - PPPA Services`,
+    title: `${service.title} - DSPPPPA Services`,
     description: service.description,
   };
 }
