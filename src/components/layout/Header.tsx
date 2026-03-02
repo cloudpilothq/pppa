@@ -23,7 +23,7 @@ export function Header() {
             { label: 'About', href: '/about' },
             { label: 'News/Media', href: '/news' },
             { label: 'Blog', href: '/blog' },
-            { label: 'Education (Your Rights)', href: '/rights' },
+            { label: 'Education', href: '/rights' },
             { label: 'Contact Us', href: '/contact' },
           ].map((link) => (
             <Link 
@@ -66,7 +66,7 @@ export function Header() {
               <Link href="/about" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
               <Link href="/news" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>News/Media</Link>
               <Link href="/blog" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-              <Link href="/rights" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Education (Your Rights)</Link>
+              <Link href="/rights" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Education</Link>
               <Link href="/contact" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </nav>
             <div className="pt-4 border-t border-slate-100">

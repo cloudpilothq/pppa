@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import { Shield, Target, Eye, Activity, Scale, HeartHandshake, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <div className="bg-slate-50 min-h-screen">
+    <div className="bg-white min-h-screen text-slate-800 font-sans pb-24">
+      
       {/* Hero Header */}
-      <div className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden">
+      <div className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden mb-16">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -22,182 +23,134 @@ export default function AboutPage() {
             About Us
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            The Public and Private Property Protection Agency (DSPPPPA) is a Delta State Government agency established to safeguard public and private property across the state.
+            The Delta State Public and Private Property Protection Agency (DSPPPPA) is a Delta State Government agency established to safeguard public and private property across the state.
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 space-y-32">
-        {/* Who We Are */}
-        <section className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Who We Are</h2>
-          <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full mb-8"></div>
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 text-justify text-justify-last-left">
-            <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              The Public and Private Property Protection Agency (DSPPPPA) is a Delta State Government agency established to safeguard public and private property across the state and to ensure that all development activities take place lawfully, peacefully, and without unlawful interference. It is the body empowered to enforce the Delta State Public and Private Properties Protection Law, 2018.
-            </p>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              The Agency was created in response to persistent threats to property development in Delta State — including illegal levies commonly known as &ldquo;deve,&rdquo; forceful entry into construction sites, illegal land occupation, harassment of developers, and unlawful disruption of construction activities. These practices have long increased development costs, delayed projects, and weakened investor confidence across the state.
-            </p>
+      {/* Container */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1000px] space-y-20 md:space-y-28">
+        
+        {/* Top Section */}
+        <section>
+          <div className="w-full aspect-[21/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-lg relative">
+            <img 
+              src="https://images.unsplash.com/photo-1519508502390-1cfa9768cdcb?q=80&w=2670&auto=format&fit=crop" 
+              alt="Delta State Landscape" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </section>
 
-        {/* Mission & Vision */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6">
-              <Target className="h-8 w-8" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
-            <p className="text-slate-600 leading-relaxed text-lg text-justify text-justify-last-left">
-              To protect public and private property in Delta State by enforcing property protection laws, preventing illegal levies, forceful entry, and unlawful occupation, and ensuring a safe, orderly, and predictable environment for development and investment.
-            </p>
+        {/* Who We Are */}
+        <section>
+          <h2 className="text-[32px] md:text-[40px] font-extrabold text-slate-800 tracking-tight mb-6">
+            Who <span className="text-[#0ea5e9]">we are</span>
+          </h2>
+          <div className="text-lg text-slate-600 leading-relaxed mb-6 text-justify">
+            <p>
+              The Public and Private Property Protection Agency (PPPPA) is a Delta State Government agency established to safeguard public and private property across the state and ensure that all development activities take place lawfully, peacefully, and without unlawful interference. It is the body empowered to enforce the Delta State Public and Private Properties Protection Law, 2018.
+            </p><br/><br/>
+            <p>
+              The Agency was created in response to persistent threats to property development in Delta State — including illegal levies commonly known as "deve," forceful entry into construction sites, illegal land occupation, harassment of developers, and unlawful disruption of construction activities. These practices have long increased development costs, delayed projects, and weakened investor confidence across the state.
+            </p><br/><br/>
           </div>
-          <div className="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-1 transition-transform duration-300">
-            <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-              <Eye className="h-8 w-8" />
-            </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
-            <p className="text-slate-600 leading-relaxed text-lg text-justify text-justify-last-left">
-              A Delta State where property development is secure, lawful, and free from intimidation — and where sustained growth and industrial progress thrive in an atmosphere of peace, order, and investor confidence.
-            </p>
+          <div className="w-full aspect-[21/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-lg relative">
+            <img 
+              src="https://images.unsplash.com/photo-1620000486849-0d86e58fbe54?q=80&w=2670&auto=format&fit=crop" 
+              alt="PPPPA Office Building" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </section>
 
         {/* What We Do */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">What We Do</h2>
-            <div className="w-20 h-1 bg-emerald-500 rounded-full mb-8"></div>
-            <div className="space-y-6 text-lg text-slate-600 leading-relaxed text-justify text-justify-last-left">
-              <p>
-                DSPPPPA enforces property protection laws, investigates complaints, protects construction sites, and eliminates extortion practices that drive up development costs and discourage investment. The Agency provides a formal channel through which individuals, businesses, and government entities can report violations, seek protection, and obtain lawful intervention in development-related disputes.
-              </p>
-              <p>
-                We collaborate with security agencies to maintain order at development sites, work with the Ministry of Justice to ensure legal compliance and proper prosecution of offenders, and partner with traditional institutions and community leadership to prevent conflicts and promote peaceful development.
-              </p>
-              <p>
-                By removing illegal barriers to development and creating a secure, predictable environment for investment, DSPPPPA plays a central role in driving Delta State&rsquo;s economic growth — supporting infrastructure expansion, job creation, and the state&rsquo;s vision of becoming a leading commercial and industrial hub in Nigeria.
-              </p>
-              <p className="font-medium text-slate-800">
-                Guided by professionalism, fairness, and transparency, the Agency is committed to upholding the rule of law and ensuring that Delta State remains a place where property development can thrive in an atmosphere of peace, security, and investor confidence.
-              </p>
+        <section>
+          <h2 className="text-[32px] md:text-[40px] font-extrabold text-slate-800 tracking-tight mb-6">
+            What <span className="text-[#0ea5e9]">we do</span>
+          </h2>
+          <div className="text-lg text-slate-600 leading-relaxed mb-6 text-justify">
+            <p>
+              PPPPA enforces property protection laws, investigates complaints, protects construction sites, and eliminates extortion practices. It collaborates with security agencies, the Ministry of Justice, and community institutions to maintain order and resolve disputes, while providing a formal channel for individuals, businesses, and government entities to report violations and seek protection.<br/><br/>
+            </p>
+            <p>
+              By removing illegal barriers to development and creating a secure, predictable environment for investment, PPPPA plays a central role in driving Delta State's economic growth — supporting infrastructure expansion, job creation, and the state's vision of becoming a leading commercial and industrial hub in Nigeria.</p><br/><br/>
+            <p>
+              Guided by professionalism, fairness, and transparency, the Agency is committed to upholding the rule of law and ensuring that Delta State remains a place where property development can thrive in an atmosphere of peace, security, and investor confidence.
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row gap-4 h-[500px] md:h-[450px]">
+            {/* Left Image */}
+            <div className="flex-1 rounded-[24px] overflow-hidden shadow-lg h-[25%] md:h-[65%] md:self-center relative">
+               <img 
+                src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop" 
+                alt="Facility" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            {/* Center Image */}
+            <div className="flex-[2] rounded-[24px] overflow-hidden shadow-xl h-[50%] md:h-full relative z-10 md:scale-105">
+               <img 
+                src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=1400&auto=format&fit=crop" 
+                alt="Construction Site" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            {/* Right Image */}
+            <div className="flex-1 rounded-[24px] overflow-hidden shadow-lg h-[25%] md:h-[65%] md:self-center relative">
+               <img 
+                src="https://images.unsplash.com/photo-1585863980140-5e608de120dd?q=80&w=800&auto=format&fit=crop" 
+                alt="Landscape" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
-          <div className="relative mt-8 lg:mt-0">
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-blue-500/20 rounded-3xl transform rotate-3 scale-105 filter blur-xl"></div>
-            <div className="grid grid-cols-2 gap-6 relative z-10">
+        </section>
+
+        {/* Our People */}
+        <section>
+          <h2 className="text-[32px] md:text-[40px] font-extrabold text-slate-800 tracking-tight mb-8">
+            Our <span className="text-[#0ea5e9]">People</span>
+          </h2>
+          <div className="rounded-[40px] border-[2px] border-[#0ea5e9] bg-[#f8fafc]/50 p-8 md:p-16">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-16">
               {[
-                { icon: Scale, text: "Enforce Laws", color: "text-emerald-600", bg: "bg-emerald-50", border: "border-emerald-100" },
-                { icon: Shield, text: "Protect Sites", color: "text-blue-600", bg: "bg-blue-50", border: "border-blue-100" },
-                { icon: Activity, text: "Investigate", color: "text-amber-600", bg: "bg-amber-50", border: "border-amber-100" },
-                { icon: HeartHandshake, text: "Resolve Disputes", color: "text-indigo-600", bg: "bg-indigo-50", border: "border-indigo-100" }
-              ].map((item, i) => (
-                <div key={i} className={`bg-white text-center p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all border ${item.border}`}>
-                  <div className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 ${item.bg} ${item.color}`}>
-                    <item.icon className="h-8 w-8" />
+                { name: "Hon Gibson Akporehe", title: "Director General", img: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=800&auto=format&fit=crop" },
+                { name: "Ms. Efemena Igbrude", title: "Director of Finance", img: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?q=80&w=800&auto=format&fit=crop" },
+                { name: "Barr. Reuben Onojewho", title: "Director of Legal", img: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?q=80&w=800&auto=format&fit=crop" },
+                { name: "Mr Kenneth Ashiponu", title: "Director of Operations", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" },
+                { name: "Mr. Efe Akpokiniovo", title: "SSA", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" },
+              ].map((person, idx) => (
+                <div key={idx} className="flex flex-col items-center text-center">
+                  <div className="w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden shadow border-2 border-white mb-4 bg-slate-200">
+                    <img src={person.img} alt={person.name} className="w-full h-full object-cover" />
                   </div>
-                  <span className="font-bold text-slate-800 text-lg">{item.text}</span>
+                  <h3 className="font-bold text-slate-800 text-[14px] md:text-[16px] leading-tight mb-1">
+                    {person.name}
+                  </h3>
+                  <p className="text-slate-500 text-[12px] md:text-[13px]">{person.title}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Our Mandate */}
-        <section className="bg-slate-900 text-white rounded-3xl p-8 md:p-16 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-10 text-center">Our Mandate</h2>
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
-              <p className="text-xl font-medium mb-8 text-emerald-400">The Agency is empowered to:</p>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6">
-                {[
-                  "Enforce all relevant laws relating to the protection of property and development across Delta State",
-                  "Prevent actions that obstruct lawful construction and infrastructure projects",
-                  "Provide a formal channel through which individuals, businesses, and government entities can seek protection, report violations, and obtain lawful intervention",
-                  "Investigate and respond to complaints of harassment, intimidation, or violence related to property and development",
-                  "Protect construction sites and development projects from illegal entry, occupation, vandalism, and theft",
-                  "Eliminate illegal levies and extortion practices that increase development costs and discourage investment",
-                  "Collaborate with security agencies to maintain order and enforce the law at development sites",
-                  "Work with the Ministry of Justice to ensure legal compliance and proper prosecution of offenders",
-                  "Partner with traditional institutions and community leadership to prevent conflicts and promote peaceful development",
-                  "Facilitate early intervention and dispute management to prevent escalation",
-                  "Promote public awareness of property rights, development regulations, and lawful processes",
-                  "Monitor and support compliance with relevant laws in collaboration with other government agencies",
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-4 items-start">
-                    <CheckCircle2 className="h-6 w-6 text-emerald-400 shrink-0 mt-0.5" />
-                    <p className="text-slate-300 leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why It Matters */}
-        <section className="bg-emerald-50 border border-emerald-100 p-8 md:p-16 rounded-3xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-8 opacity-5">
-            <Shield className="w-64 h-64 text-emerald-900" />
-          </div>
-          <div className="relative z-10 max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why It Matters</h2>
-            <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full mb-8"></div>
-            <p className="text-xl text-slate-700 leading-relaxed font-medium text-justify text-justify-last-left">
-              By securing development sites, protecting investments, and removing illegal barriers to construction, DSPPPPA contributes directly to the growth of towns and cities across Delta State. Through its enforcement and protective functions, DSPPPPA helps establish the conditions necessary for infrastructure expansion, economic growth, job creation, and the attraction of local and external investment — supporting Delta State&rsquo;s vision of becoming a leading destination for business and development in Nigeria.
-            </p>
-          </div>
-        </section>
-
-        {/* Our People */}
-        <section>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Our People</h2>
-            <div className="w-20 h-1 bg-emerald-500 mx-auto rounded-full mb-6"></div>
-            <p className="text-lg text-slate-600">The leadership driving the vision.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { name: "Hon. Gibson Akporehe", title: "Director General" },
-              { name: "Ms. Efemena Igbrude", title: "Director of Finance" },
-              { name: "Barr. Reuben Onojewho", title: "Director of Legal" },
-              { name: "Mr. Kenneth Ashiponu", title: "Director of Operations" },
-              { name: "Mr. Efe Akpokiniovo", title: "SSA" },             
-            ].map((person, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
-                <div className="w-24 h-24 bg-slate-100 text-slate-400 rounded-full mx-auto flex items-center justify-center mb-6">
-                  <Users className="h-10 w-10" />
-                </div>
-                <h3 className="font-bold text-slate-900 text-lg mb-2">{person.name}</h3>
-                <p className="text-emerald-600 font-medium">{person.title}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* CTA */}
-        <section className="bg-emerald-600 text-white rounded-3xl p-10 md:p-16 text-center relative overflow-hidden shadow-2xl shadow-emerald-600/20">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/10 rounded-full blur-3xl mix-blend-overlay"></div>
-          
-          <div className="relative z-10 max-w-2xl mx-auto gap-6 flex flex-col">
-            <h2 className="text-3xl md:text-5xl font-bold">Ready to Learn More or <br className="hidden md:block"/>File a Complaint?</h2>
-            <p className="text-emerald-50 text-xl leading-relaxed mt-4 mb-6">
-              If you&rsquo;d like to learn more about our operations or report a property violation, you can reach us via the contact information below or use our complaints form.
+        <section>
+          <div className="rounded-[32px] bg-[#1e5aa0] px-6 py-16 text-center shadow-xl">
+            <p className="text-white text-[15px] md:text-[16px] max-w-[650px] mx-auto leading-relaxed mb-10">
+              If you'd like to learn more about our operations or file a complaint, you can reach us via the contact information provided below or click on the button below
             </p>
-            <div className="flex justify-center mt-2">
-              <Link
-                href="/report"
-                className="inline-flex items-center justify-center px-8 py-5 text-lg font-bold text-emerald-600 bg-white rounded-xl hover:bg-slate-50 transition-all shadow-xl active:scale-95 transform group"
-              >
-                File a Complaint
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            <Link 
+              href="/report"
+              className="inline-block bg-white text-[#1e5aa0] px-8 py-3.5 rounded-[12px] font-bold text-[14px] hover:bg-slate-50 transition-colors shadow-lg active:scale-95"
+            >
+              File a Complaint
+            </Link>
           </div>
         </section>
+        
       </div>
     </div>
   );
