@@ -20,11 +20,11 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-1">
           {[
             { label: 'Home', href: '/' },
-            { label: 'Services', href: '/services' },
-            { label: 'Your Rights', href: '/rights' },
-            { label: 'Leadership', href: '/leadership' },
-            { label: 'News', href: '/news' },
-            { label: 'Contact', href: '/contact' },
+            { label: 'About', href: '/about' },
+            { label: 'News/Media', href: '/news' },
+            { label: 'Blog', href: '/blog' },
+            { label: 'Education (Your Rights)', href: '/rights' },
+            { label: 'Contact Us', href: '/contact' },
           ].map((link) => (
             <Link 
               key={link.label}
@@ -62,13 +62,12 @@ export function Header() {
         <div className="md:hidden border-t bg-white border-slate-200 absolute w-full left-0 top-16 shadow-lg animate-in slide-in-from-top-2">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <nav className="flex flex-col gap-4 text-base font-medium text-slate-700">
-              <Link href="/home" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link href="/services" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
-              <Link href="/rights" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Your Rights</Link>
-              <Link href="/leadership" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Leadership</Link>
-              <Link href="/news" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>News</Link>
-              <Link href="/faq" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>FAQ</Link>
-              <Link href="/contact" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link href="/" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link href="/about" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link href="/news" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>News/Media</Link>
+              <Link href="/blog" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+              <Link href="/rights" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Education (Your Rights)</Link>
+              <Link href="/contact" className="p-2 hover:bg-slate-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
             </nav>
             <div className="pt-4 border-t border-slate-100">
                <Link href="/contact" className="flex items-center gap-2 text-sm font-medium text-red-600 p-2 hover:bg-red-50 rounded-lg" onClick={() => setIsMenuOpen(false)}>
