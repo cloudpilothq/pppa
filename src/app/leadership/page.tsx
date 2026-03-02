@@ -3,32 +3,39 @@ import { UserCheck, ShieldCheck, Award, Briefcase } from "lucide-react";
 const DEMO_LEADERS = [
   {
     id: 1,
-    name: "Dr. Emmanuel Okonji",
+    name: "Hon. Gibson Akporehe",
     role: "Director General",
-    bio: "Dr. Okonji brings over 20 years of experience in public administration and property law. He leads the DSPPPPA with a vision of a secure, transparent, and legally compliant property sector in Delta State. Under his leadership, the agency has significantly reduced land-related disputes and illegal levies.",
+    bio: "Hon. Gibson Akporehe brings over 20 years of experience in public administration and property law. He leads the DSPPPPA with a vision of a secure, transparent, and legally compliant property sector in Delta State. Under his leadership, the agency has significantly reduced land-related disputes and illegal levies.",
     icon: <ShieldCheck className="h-16 w-16" />
   },
   {
     id: 2,
-    name: "Barrister Aisha Bello",
-    role: "Head of Legal & Enforcement",
-    bio: "A seasoned property rights lawyer, Barrister Bello oversees the agency's enforcement actions. She works closely with state security agencies to ensure that violations like 'deve' collections and forceful entries are met with swift judicial action.",
+    name: "Ms. Efemena Igbrude",
+    role: "Director of Finance",
+    bio: "Ms. Igbrude brings her top notch experience in finance and accounting. She leads the agency's financial operations, ensuring that the agency's resources are used effectively and efficiently.",
     icon: <Award className="h-16 w-16" />
   },
   {
     id: 3,
-    name: "Engr. David Omatseye",
-    role: "Director of Field Operations",
-    bio: "Engr. Omatseye coordinates the on-ground task forces deployed across Warri, Asaba, and other key development hubs. His expertise in construction and site management ensures that field operations are handled professionally and safely.",
+    name: "Barr. Reuben Onojewho",
+    role: "Director of Legal",
+    bio: "Barr. Onojewho oversees the agency's legal framework and enforcement strategies. With his extensive experience in property law and public policy, he guides the prosecution of property rights violators, ensures statutory compliance across all operations, and provides critical legal counsel to protect landowners in Delta State.",
     icon: <Briefcase className="h-16 w-16" />
   },
   {
     id: 4,
-    name: "Mrs. Grace Nwadi",
-    role: "Head of Public Relations",
-    bio: "Mrs. Nwadi manages the agency's communications, ensuring the public is educated about their property rights. She leads community town halls and develops campaigns that encourage citizens to report unlawful disruptions.",
+    name: "Mr. Kenneth Ashiponu",
+    role: "Director of Operations",
+    bio: "Mr. Ashiponu coordinates the on-ground task forces deployed across Warri, Asaba, and other key development hubs. His expertise in construction and site management ensures that field operations are handled professionally and safely.",
     icon: <UserCheck className="h-16 w-16" />
-  }
+  },
+  {
+    id: 5,
+    name: "Mr. Efe Akpokiniovo",
+    role: "SSA",
+    bio: "Mr. Akpokiniovo manages the agency's communications, ensuring the public is educated about their property rights. He leads community town halls and develops campaigns that encourage citizens to report unlawful disruptions.",
+    icon: <UserCheck className="h-16 w-16" />
+  },
 ];
 
 export default function LeadershipPage() {

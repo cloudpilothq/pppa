@@ -164,6 +164,7 @@ export default function AboutPage() {
               { name: "Ms. Efemena Igbrude", title: "Director of Finance" },
               { name: "Barr. Reuben Onojewho", title: "Director of Legal" },
               { name: "Mr. Kenneth Ashiponu", title: "Director of Operations" },
+              { name: "Mr. Efe Akpokiniovo", title: "SSA" },             
             ].map((person, idx) => (
               <div key={idx} className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 text-center hover:-translate-y-2 transition-transform duration-300">
                 <div className="w-24 h-24 bg-slate-100 text-slate-400 rounded-full mx-auto flex items-center justify-center mb-6">
