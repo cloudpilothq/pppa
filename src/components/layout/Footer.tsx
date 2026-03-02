@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Shield, Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 export function Footer() {
@@ -8,14 +9,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2 font-bold text-2xl text-white">
-              <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white">
-                 <Shield className="h-6 w-6" />
-              </div>
-              <span>DSPPPPA</span>
+            <Link href="/" className="flex items-center gap-3 font-bold text-2xl text-white">
+              <Image 
+                src="/logo.png" 
+                alt="DSPPPPA Logo" 
+                width={48} 
+                height={48} 
+                className="w-12 h-12 object-contain rounded-full bg-white p-1"
+              />
+              {/*<span className="tracking-tight">DSPPPPA</span>*/}
             </Link>
-            <p className="text-slate-400 leading-relaxed">
-              The Official Private Public Property Protection Agency. Dedicated to safeguarding assets, ensuring public trust, and upholding property rights for all citizens.
+            <p className="text-slate-400 leading-relaxed text-justify">
+              The Delta State Private Public Property Protection Agency is dedicated to safeguarding assets, ensuring public trust, and upholding property rights for all citizens.
             </p>
             <div className="flex gap-4 pt-2">
               <Link href="#" className="p-2 bg-slate-900 rounded-full hover:bg-emerald-600 hover:text-white transition-all text-slate-400">
@@ -66,7 +71,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="h-5 w-5 text-emerald-500 shrink-0" />
-                <span>info@dspppa.org</span>
+                <span>info@dsppppa.org</span>
               </li>
             </ul>
           </div>
