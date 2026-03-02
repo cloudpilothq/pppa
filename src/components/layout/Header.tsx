@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Shield, Phone, AlertTriangle, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -11,8 +12,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl text-primary">
-          <Shield className="h-8 w-8 text-secondary" />
+        <Link href="/" className="flex items-center gap-3 font-bold text-xl text-primary">
+          <Image 
+            src="/logo.png" 
+            alt="DSPPPPA Logo" 
+            width={40} 
+            height={40} 
+            className="w-10 h-10 object-contain rounded-full shadow-sm"
+          />
           <span className="hidden sm:inline-block tracking-tight text-primary">DSPPPPA</span>
         </Link>
         
