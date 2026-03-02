@@ -20,7 +20,7 @@ export function Header() {
             height={40} 
             className="w-10 h-10 object-contain rounded-full shadow-sm"
           />
-          <span className="hidden sm:inline-block tracking-tight text-primary">DSPPPPA</span>
+          {/*<span className="hidden sm:inline-block tracking-tight text-primary">DSPPPPA</span>*/}
         </Link>
         
         {/* Desktop Navigation */}

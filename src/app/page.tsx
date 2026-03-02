@@ -66,10 +66,10 @@ export default function HomePage() {
                 border: "hover:border-red-500/50",
               },
               {
-                title: "Public Records",
+                title: "Education",
                 icon: FileText,
-                desc: "Access public property registries and legal documents.",
-                link: "/records",
+                desc: "Learn about property rights and regulations.",
+                link: "/education",
                 color: "text-blue-500",
                 bg: "bg-blue-500/10",
                 border: "hover:border-blue-500/50",
