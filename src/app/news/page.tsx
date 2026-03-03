@@ -1,18 +1,10 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { Newspaper, ArrowRight, ChevronLeft, ChevronRight, Calendar } from "lucide-react"; 
 import Link from "next/link";
 import Image from "next/image";
-
-const FACTUAL_NEWS = [
-  { id: 1, title: "Delta Assembly Proposes State Landlord and Tenant Law 2025", summary: "A new bill to standardize the relationship between landlords and tenants in Delta State has been proposed, aiming to replace the 1977 Rent Control law with modern protections.", date: "2025-02-14", url: "https://propertyaccess.ng/delta-assembly-proposes-delta-state-landlord-and-tenant-law-2025/", image: "/news/news_tenant_law_2025_1772545979908.png" },
-  { id: 2, title: "Delta State Assures On Delivery of Housing Projects", summary: "The Delta State Commissioner for Housing has outlined strategic plans to tackle housing challenges, including the construction of duplexes and terraces for middle-income earners by 2025.", date: "2024-05-18", url: "https://guardian.ng/property/delta-state-assures-on-delivery-of-housing-projects/", image: "/news/news_housing_projects_1772545953160.png" },
-  { id: 3, title: "Asaba Waterfront City: Govt Warns Against Illegal Structures", summary: "Authorities have issued strict warnings against illegal structures within the Asaba Waterfront City project area, threatening demolition of unauthorized constructions.", date: "2024-04-12", url: "https://guardian.ng/property/delta-govt-warns-against-illegal-structures-at-asaba-waterfront-city/", image: "/news/news_asaba_waterfront_1772545906812.png" },
-  { id: 4, title: "Delta State Commits to Enforcing Anti-Deve Law", summary: "To create a secure investor environment, the state government is strictly enforcing the Public and Private Properties Protection Law to end illegal development levies.", date: "2024-03-25", url: "https://gazettengr.com/delta-state-enforces-anti-deve-law/", image: "/news/news_anti_deve_law_1772545928184.png" },
-  { id: 5, title: "Govt to Recover Illegally Occupied State Lands", summary: "The state government has announced its intention to recover all government lands illegally occupied by grabbers and demolish structures built without proper state approvals.", date: "2024-02-08", url: "https://guardian.ng/news/delta-state-to-recover-illegally-occupied-lands/", image: "/news/news_land_recovery_1772546013789.png" },
-  { id: 6, title: "Peace Moves Initiated in Ibusa and Ogwashi-Uku Land Dispute", summary: "The Delta State government has intervened in a long-standing land disagreement, urging calm and peaceful resolution between the neighboring communities.", date: "2024-01-15", url: "https://thetrumpet.ng/delta-calls-for-peace-in-ibusa-ogwashi-uku-land-dispute/", image: "/news/news_community_dispute_1772546063246.png" },
-];
+import { FACTUAL_NEWS } from '@/lib/newsData';
 
 const ITEMS_PER_PAGE = 6;
 
@@ -55,7 +47,7 @@ export default function NewsPage() {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {currentNews.map((item) => (
-             <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" className="group h-full flex flex-col">
+             <Link key={item.id} href={`/news/${item.slug}`} className="group h-full flex flex-col">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-slate-200/50 border border-slate-100 hover:shadow-2xl hover:-translate-y-2 hover:border-emerald-200 transition-all duration-300 h-full flex flex-col relative">
                    
                    <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl text-xs font-bold text-slate-800 flex items-center gap-2 shadow-sm z-10 border border-slate-100">
@@ -84,7 +76,7 @@ export default function NewsPage() {
                       </div>
                    </div>
                 </div>
-             </a>
+             </Link>
           ))}
         </div>
 
