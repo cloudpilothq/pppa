@@ -39,13 +39,13 @@ const rightsData = [
     desc: "Citizens' rights to access designated public paths and commons.",
     fullText: "Public pathways, roads, and designated commons are government property intended for the free movement and use of all citizens. It is illegal for any private individual or community group to block, gate, or charge unauthorized tolls ('deve') on public access routes. The DSPPPPA enforces the protection of these public assets and will dismantle illegal structures obstructing natural waterways or public paths."
   },
-  /*{
+  {
     id: 6,
-    category: "Ownership",
-    title: "Transferring Property",
-    desc: "Legal requirements and taxes involved in selling or gifting property.",
-    fullText: "Transferring property in Delta State requires executing a Deed of Assignment or similar transfer document, obtaining the Governor's Consent, and registering the title at the lands registry. This process involves paying necessary statutory fees, including stamp duties, capital gains tax, and registration fees. Only properly registered property transfers provide complete legal protection to the new owner against future claims."
-  },*/
+    category: "Law",
+    title: "Delta Development and Property Authority Law",
+    desc: "Establishes a state-run body responsible for promoting and managing property development through the acquisition, construction, and disposal of properties.",
+    fullText: "This law provides the legal framework for the Delta Development and Property Authority, granting it the power to acquire, develop, and manage various types of real estate including dwelling houses, offices, and industrial complexes. The Authority is tasked with increasing the availability of habitable housing and commercial spaces, and it is empowered to grant loans to individuals or companies for property development purposes. Additionally, the law authorizes the body to provide consultancy services in land-related matters and engage in the sale of building materials to support the state's development goals."
+  },
 ];
 
 export default function RightsPage() {
