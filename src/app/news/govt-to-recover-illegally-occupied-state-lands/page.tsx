@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, ArrowLeft, Clock, Share2 } from 'lucide-react';
+import { Calendar, ArrowLeft, Clock } from 'lucide-react';
+import ShareButton from '@/components/ShareButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,9 +17,10 @@ export default function Page() {
           <Link href="/news" className="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />Back to News
           </Link>
-          <button className="p-2 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-colors" title="Share Article">
-            <Share2 className="h-5 w-5" />
-          </button>
+          <ShareButton
+            title="Govt to Recover Illegally Occupied State Lands"
+            summary="The state government has announced its intention to recover all government lands illegally occupied by grabbers and demolish structures built without proper state approvals."
+          />
         </div>
       </div>
 
@@ -35,7 +37,7 @@ export default function Page() {
           <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
             Govt to Recover Illegally Occupied State Lands
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
             The state government has announced its intention to recover all government lands illegally occupied by grabbers and demolish structures built without proper state approvals.
           </p>
         </header>
@@ -45,13 +47,13 @@ export default function Page() {
         </div>
 
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             Following rising concerns over unauthorized land speculation, the Delta State Government has officially announced a statewide initiative aimed at recovering all government-owned lands that have been illegally occupied by land grabbers. This operation underscores the administration&apos;s zero-tolerance policy towards the unlawful appropriation of state assets.
           </p>
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             State officials have noted coordinated efforts by syndicates to occupy, partition, and sell off designated government layouts without the requisite legal authority or approved documents. In response, task forces comprising surveyors, legal personnel, and enforcement officers from the DSPPPPA have been mobilized to identify and map out all encroached state properties.
           </p>
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             The government has made it explicitly clear that any structures erected on state land without verifiable, proper state approvals will be subject to demolition. Investors and citizens are strongly urged to conduct comprehensive due diligence at the state land registry before engaging in any property transactions to avoid severe financial losses associated with illegal acquisitions.
           </p>
         </div>
@@ -59,7 +61,7 @@ export default function Page() {
         <div className="mt-16 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-4">Stay Informed Ahead of Time</h3>
           <p className="text-emerald-100 max-w-2xl mx-auto mb-8">
-            Sign up for SMS alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
+            Sign up for email alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
           </p>
           <button className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1">
             Subscribe to Alerts

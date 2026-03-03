@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, ArrowLeft, Clock, Share2 } from 'lucide-react';
+import { Calendar, ArrowLeft, Clock } from 'lucide-react';
+import ShareButton from '@/components/ShareButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,9 +17,10 @@ export default function Page() {
           <Link href="/news" className="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />Back to News
           </Link>
-          <button className="p-2 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-colors" title="Share Article">
-            <Share2 className="h-5 w-5" />
-          </button>
+          <ShareButton
+            title="Delta Assembly Proposes State Landlord and Tenant Law 2025"
+            summary="A new bill to standardize the relationship between landlords and tenants in Delta State has been proposed, aiming to replace the 1977 Rent Control law with modern protections."
+          />
         </div>
       </div>
 
@@ -35,7 +37,7 @@ export default function Page() {
           <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
             Delta Assembly Proposes State Landlord and Tenant Law 2025
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
             A new bill to standardize the relationship between landlords and tenants in Delta State has been proposed, aiming to replace the 1977 Rent Control law with modern protections.
           </p>
         </header>
@@ -45,13 +47,13 @@ export default function Page() {
         </div>
 
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             The Delta State House of Assembly has recently proposed a comprehensive new bill cited as the Delta State Landlord and Tenant Law 2025. This landmark legislative effort is designed to thoroughly overhaul and standardize the relationship between property owners and renters across the state, bringing modern protections to a sector that has long relied on outdated legal frameworks.
           </p>
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             A primary objective of the proposed 2025 Law is to officially repeal the antiquated 1977 Rent Control law, which no longer reflects the current economic realities or housing dynamics of Delta State. By introducing this new legal structure, state legislators aim to establish a more functional, equitable, and harmonious housing system for all residents.
           </p>
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             The bill introduces crucial modern protections for tenants, specifically aiming to curb sudden and arbitrary rent increments without proper economic justification. Furthermore, it strictly regulates the eviction process, ensuring that landlords must provide adequate, legally stipulated notice periods rather than resorting to self-help or harassment. The law also aims to bring transparency to real estate transactions by regulating agents to prevent exploitative commission fees.
           </p>
         </div>
@@ -59,7 +61,7 @@ export default function Page() {
         <div className="mt-16 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-4">Stay Informed Ahead of Time</h3>
           <p className="text-emerald-100 max-w-2xl mx-auto mb-8">
-            Sign up for SMS alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
+            Sign up for email alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
           </p>
           <button className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1">
             Subscribe to Alerts

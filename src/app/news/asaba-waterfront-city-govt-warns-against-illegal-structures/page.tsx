@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, ArrowLeft, Clock, Share2 } from 'lucide-react';
+import { Calendar, ArrowLeft, Clock } from 'lucide-react';
+import ShareButton from '@/components/ShareButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,9 +17,10 @@ export default function Page() {
           <Link href="/news" className="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />Back to News
           </Link>
-          <button className="p-2 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-full transition-colors" title="Share Article">
-            <Share2 className="h-5 w-5" />
-          </button>
+          <ShareButton
+            title="Asaba Waterfront City: Govt Warns Against Illegal Structures"
+            summary="Authorities have issued strict warnings against illegal structures within the Asaba Waterfront City project area, threatening demolition of unauthorized constructions."
+          />
         </div>
       </div>
 
@@ -35,7 +37,7 @@ export default function Page() {
           <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
             Asaba Waterfront City: Govt Warns Against Illegal Structures
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
             Authorities have issued strict warnings against illegal structures within the Asaba Waterfront City project area, threatening demolition of unauthorized constructions.
           </p>
         </header>
@@ -45,13 +47,13 @@ export default function Page() {
         </div>
 
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             The Delta State Government has issued a firm and unequivocal warning to developers and members of the public against the erection of illegal structures within the designated Asaba Waterfront City project area. This warning comes as part of a massive urban renewal agenda aimed at transforming the state capital into a modern, planned metropolis.
           </p>
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             In Asaba, the state government has already commenced the extensive reclamation of over 775 hectares of land situated along the River Niger. This ambitious project includes 352 hectares specifically delineated for the Asaba Waterfront City, and an additional 423 hectares of floodplain earmarked for the proposed Niger City development to boost economic and residential capacity.
           </p>
-          <p className="text-slate-700 leading-relaxed text-[17px]">
+          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
             While the government has pledged proper compensation to verified landowners affected by the authorized urban renewal efforts, state authorities, backed by the DSPPPPA, are actively monitoring the reclaimed land. Developers who bypass state approvals lay themselves open to severe consequences, as the state has reiterated its readiness to promptly demolish any unauthorized constructions discovered within the Waterfront City zones.
           </p>
         </div>
@@ -59,7 +61,7 @@ export default function Page() {
         <div className="mt-16 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-4">Stay Informed Ahead of Time</h3>
           <p className="text-emerald-100 max-w-2xl mx-auto mb-8">
-            Sign up for SMS alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
+            Sign up for email alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
           </p>
           <button className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1">
             Subscribe to Alerts
