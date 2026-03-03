@@ -12,12 +12,12 @@ const rightsData = [
   {
     category: "Tenancy",
     title: "Rights of a Tenant",
-    desc: "Protection against unlawful eviction and fair rent control regulations.",
+    desc: "Protection from sudden, arbitrary rent increments and unfair eviction practices under the proposed Delta State Landlord and Tenant Law 2025.",
   },
   {
     category: "Tenancy",
     title: "Landlord Responsibilities",
-    desc: "Obligations for maintenance and safety standards in rental properties.",
+    desc: "Adherence to structured eviction processes, rent control guidelines, and the use of regulated, registered agents for transparent transactions.",
   },
   {
     category: "Disputes",
