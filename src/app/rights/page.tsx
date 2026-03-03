@@ -25,13 +25,13 @@ const rightsData = [
     desc: "Adherence to structured eviction processes, rent control guidelines, and the use of regulated, registered agents for transparent transactions.",
     fullText: "Under the proposed 2025 Law, landlords are expected to follow structured and lawful eviction processes rather than resorting to self-help or harassment. Furthermore, the law touches on the role of real estate agents, aiming to bring structure and transparency to property transactions. Agents must be properly registered, and their commission rates will be regulated to prevent exploitative fees, ensuring a fair housing environment for all parties involved."
   },
-  {
+  /*{
     id: 4,
     category: "Disputes",
     title: "Resolving Boundary Conflicts",
     desc: "Steps to take when a neighbor encroaches on your property line.",
     fullText: "Boundary disputes often begin with minor encroachments, such as a fence built slightly over the property line. The first step should always be amicable discussion aided by a professional land survey to establish the exact, legally recorded boundaries. If the conflict persists, the DSPPPPA provides a formal dispute resolution mechanism to mediate the issue before it escalates to costly litigation in court."
-  },
+  },*/
   {
     id: 5,
     category: "Public Land",
@@ -39,13 +39,13 @@ const rightsData = [
     desc: "Citizens' rights to access designated public paths and commons.",
     fullText: "Public pathways, roads, and designated commons are government property intended for the free movement and use of all citizens. It is illegal for any private individual or community group to block, gate, or charge unauthorized tolls ('deve') on public access routes. The DSPPPPA enforces the protection of these public assets and will dismantle illegal structures obstructing natural waterways or public paths."
   },
-  {
+  /*{
     id: 6,
     category: "Ownership",
     title: "Transferring Property",
     desc: "Legal requirements and taxes involved in selling or gifting property.",
     fullText: "Transferring property in Delta State requires executing a Deed of Assignment or similar transfer document, obtaining the Governor's Consent, and registering the title at the lands registry. This process involves paying necessary statutory fees, including stamp duties, capital gains tax, and registration fees. Only properly registered property transfers provide complete legal protection to the new owner against future claims."
-  },
+  },*/
 ];
 
 export default function RightsPage() {
