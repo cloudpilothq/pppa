@@ -25,13 +25,13 @@ const rightsData = [
     desc: "Adherence to structured eviction processes, rent control guidelines, and the use of regulated, registered agents for transparent transactions.",
     fullText: "Under the proposed 2025 Law, landlords are expected to follow structured and lawful eviction processes rather than resorting to self-help or harassment. Furthermore, the law touches on the role of real estate agents, aiming to bring structure and transparency to property transactions. Agents must be properly registered, and their commission rates will be regulated to prevent exploitative fees, ensuring a fair housing environment for all parties involved."
   },
-  /*{
+  {
     id: 4,
-    category: "Disputes",
-    title: "Resolving Boundary Conflicts",
-    desc: "Steps to take when a neighbor encroaches on your property line.",
-    fullText: "Boundary disputes often begin with minor encroachments, such as a fence built slightly over the property line. The first step should always be amicable discussion aided by a professional land survey to establish the exact, legally recorded boundaries. If the conflict persists, the DSPPPPA provides a formal dispute resolution mechanism to mediate the issue before it escalates to costly litigation in court."
-  },*/
+    category: "Law",
+    title: "Delta State Property Tax Law",
+    desc: "Mandates the assessment and collection of taxes from property owners in the state, excluding properties used solely for the owner's residence.",
+    fullText: "This law establishes a framework for the Delta State Board of Internal Revenue to assess and collect property taxes from owners of buildings and structures across the state. While it excludes properties used solely for the owner’s residential needs, it covers commercial and non-owner-occupied premises, requiring payment within statutorily designated periods. The law aims to streamline revenue generation while providing clear guidelines for liability, exemptions, and compliance."
+  },
   {
     id: 5,
     category: "Public Land",
