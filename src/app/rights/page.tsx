@@ -42,6 +42,20 @@ const rightsData = [
   {
     id: 6,
     category: "Law",
+    title: "Public Property Commission Law",
+    desc: "Establishes a commission to investigate and examine the operation, control, and management of Delta State Government property.",
+    fullText: "This law provides for the creation of a Public Property Commission, chaired by a judge, with the authority to probe any matters relating to state-owned assets, including real property, machinery, and shares. The Commission is granted extensive legal powers, such as summoning witnesses, issuing warrants of arrest, entering land for evidence, and even remanding individuals in custody for non-compliance. Once an investigation is complete, the Commission submits its recommendations and findings to the Governor to ensure transparent and accountable management of public resources."
+  },
+  {
+    id: 7,
+    category: "Law",
+    title: "Administration of Estates Law",
+    desc: "Provides the legal framework for the management, devolution, and distribution of the assets of deceased persons in Delta State.",
+    fullText: "This law regulates the rights and duties of personal representatives in managing the real and personal property of deceased individuals, ensuring that estates are handled according to legal standards. It covers the devolution of property to heirs, the administration of assets for both testate and intestate successions, and the priority of debts and funeral expenses. Additionally, it establishes the authority of the High Court in granting letters of administration and overseeing the probate process to protect the interests of beneficiaries and creditors."
+  },
+  {
+    id: 8, // Changed from 6 to 8 to maintain unique IDs
+    category: "Law",
     title: "Delta Development and Property Authority Law",
     desc: "Establishes a state-run body responsible for promoting and managing property development through the acquisition, construction, and disposal of properties.",
     fullText: "This law provides the legal framework for the Delta Development and Property Authority, granting it the power to acquire, develop, and manage various types of real estate including dwelling houses, offices, and industrial complexes. The Authority is tasked with increasing the availability of habitable housing and commercial spaces, and it is empowered to grant loans to individuals or companies for property development purposes. Additionally, the law authorizes the body to provide consultancy services in land-related matters and engage in the sale of building materials to support the state's development goals."
