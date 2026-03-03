@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = FACTUAL_NEWS.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const post = FACTUAL_NEWS.find((p) => p.slug === resolvedParams.slug);
   
   if (!post) {
     return {
@@ -25,11 +26,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function NewsArticlePage({ params }: { params: { slug: string } }) {
-  const post = FACTUAL_NEWS.find((p) => p.slug === params.slug);
+export default async function NewsArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = FACTUAL_NEWS.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
+    return null; // helps TypeScript narrow the type below
   }
 
   const formattedDate = new Intl.DateTimeFormat('en-US', { 
@@ -106,7 +109,7 @@ export default function NewsArticlePage({ params }: { params: { slug: string } }
         <div className="mt-16 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl shadow-emerald-200/50">
            <h3 className="text-2xl font-bold mb-4">Stay Informed Ahead of Time</h3>
            <p className="text-emerald-100 max-w-2xl mx-auto mb-8">
-             Sign up for SMS alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
+             Sign up for email alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
            </p>
            <button className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1">
              Subscribe to Alerts
