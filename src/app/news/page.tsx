@@ -3,20 +3,15 @@
 import { useState } from 'react';
 import { Newspaper, ArrowRight, ChevronLeft, ChevronRight, Calendar } from "lucide-react"; 
 import Link from "next/link";
+import Image from "next/image";
 
-const DEMO_NEWS = [
-  { id: 1, title: "DSPPPPA Cracks Down on Illegal 'Deve' Collectors in Asaba", summary: "The agency successfully apprehended a syndicate posing as community youths demanding illegal development levies at a major construction site.", date: "2026-02-25", slug: "crackdown-asaba" },
-  { id: 2, title: "State Government Reiterates Zero Tolerance for Land Grabbing", summary: "During the annual property summit, the Governor emphasized that the DSPPPPA has full backing to prosecute land grabbers to the full extent of the law.", date: "2026-02-20", slug: "zero-tolerance" },
-  { id: 3, title: "New Taskforce Deployed to Warri Industrial Hub", summary: "To protect ongoing commercial developments, a specialized DSPPPPA taskforce has been permanently stationed in the Warri industrial zone.", date: "2026-02-15", slug: "warri-taskforce" },
-  { id: 4, title: "Public Sensitization Campaign Launches Next Week", summary: "The agency is launching a statewide campaign to educate property owners on how to verify titles and report unlawful interference.", date: "2026-02-10", slug: "sensitization-campaign" },
-  { id: 5, title: "DSPPPPA Recovers 50 Hectares of Illegally Occupied State Land", summary: "Following a month-long investigation, the agency has successfully evicted squatters and speculators from a designated state housing estate.", date: "2026-02-05", slug: "land-recovery" },
-  { id: 6, title: "Warning Issued to Fraudulent Real Estate Agents", summary: "The agency issues a stern warning against unauthorized agents selling properties with forged layout approvals.", date: "2026-01-28", slug: "fraudulent-agents-warning" },
-  { id: 7, title: "New Director General Pledges Swift Response Times", summary: "Newly appointed DG outlines his 100-day plan, focusing on reducing complaint response times to under 24 hours.", date: "2026-01-20", slug: "dg-pledge" },
-  { id: 8, title: "DSPPPPA Partners with Local Security Outfits", summary: "A new MoU has been signed with local vigilante groups to provide early warnings regarding site encroachments.", date: "2026-01-15", slug: "security-partnership" },
-  { id: 9, title: "Digital Property Verification Portal Enters Beta", summary: "Citizens will soon be able to verify property documents online, reducing the risk of purchasing disputed lands.", date: "2026-01-10", slug: "digital-portal" },
-  { id: 10, title: "Arrests Made in Multi-Million Naira Land Scam", summary: "Three individuals have been handed over to the police for orchestrating a massive land fraud scheme in Effurun.", date: "2026-01-05", slug: "land-scam-arrests" },
-  { id: 11, title: "Year in Review: DSPPPPA's Achievements in 2025", summary: "A comprehensive look back at the agency's successes in reducing property disputes and enforcing the law last year.", date: "2025-12-28", slug: "year-in-review-2025" },
-  { id: 12, title: "Holiday Season Security Advisory for Developers", summary: "Developers are advised to secure their sites during the festive season to prevent vandalism and theft.", date: "2025-12-15", slug: "holiday-advisory" },
+const FACTUAL_NEWS = [
+  { id: 1, title: "Delta Assembly Proposes State Landlord and Tenant Law 2025", summary: "A new bill to standardize the relationship between landlords and tenants in Delta State has been proposed, aiming to replace the 1977 Rent Control law with modern protections.", date: "2025-02-14", url: "https://propertyaccess.ng/delta-assembly-proposes-delta-state-landlord-and-tenant-law-2025/", image: "/news/news_tenant_law_2025_1772545979908.png" },
+  { id: 2, title: "Delta State Assures On Delivery of Housing Projects", summary: "The Delta State Commissioner for Housing has outlined strategic plans to tackle housing challenges, including the construction of duplexes and terraces for middle-income earners by 2025.", date: "2024-05-18", url: "https://guardian.ng/property/delta-state-assures-on-delivery-of-housing-projects/", image: "/news/news_housing_projects_1772545953160.png" },
+  { id: 3, title: "Asaba Waterfront City: Govt Warns Against Illegal Structures", summary: "Authorities have issued strict warnings against illegal structures within the Asaba Waterfront City project area, threatening demolition of unauthorized constructions.", date: "2024-04-12", url: "https://guardian.ng/property/delta-govt-warns-against-illegal-structures-at-asaba-waterfront-city/", image: "/news/news_asaba_waterfront_1772545906812.png" },
+  { id: 4, title: "Delta State Commits to Enforcing Anti-Deve Law", summary: "To create a secure investor environment, the state government is strictly enforcing the Public and Private Properties Protection Law to end illegal development levies.", date: "2024-03-25", url: "https://gazettengr.com/delta-state-enforces-anti-deve-law/", image: "/news/news_anti_deve_law_1772545928184.png" },
+  { id: 5, title: "Govt to Recover Illegally Occupied State Lands", summary: "The state government has announced its intention to recover all government lands illegally occupied by grabbers and demolish structures built without proper state approvals.", date: "2024-02-08", url: "https://guardian.ng/news/delta-state-to-recover-illegally-occupied-lands/", image: "/news/news_land_recovery_1772546013789.png" },
+  { id: 6, title: "Peace Moves Initiated in Ibusa and Ogwashi-Uku Land Dispute", summary: "The Delta State government has intervened in a long-standing land disagreement, urging calm and peaceful resolution between the neighboring communities.", date: "2024-01-15", url: "https://thetrumpet.ng/delta-calls-for-peace-in-ibusa-ogwashi-uku-land-dispute/", image: "/news/news_community_dispute_1772546063246.png" },
 ];
 
 const ITEMS_PER_PAGE = 6;
@@ -24,9 +19,9 @@ const ITEMS_PER_PAGE = 6;
 export default function NewsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   
-  const totalPages = Math.ceil(DEMO_NEWS.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(FACTUAL_NEWS.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentNews = DEMO_NEWS.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentNews = FACTUAL_NEWS.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   const goToPage = (page: number) => {
     setCurrentPage(page);
@@ -60,7 +55,7 @@ export default function NewsPage() {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {currentNews.map((item) => (
-             <Link key={item.id} href={`#`} className="group h-full flex flex-col">
+             <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" className="group h-full flex flex-col">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg shadow-slate-200/50 border border-slate-100 hover:shadow-2xl hover:-translate-y-2 hover:border-emerald-200 transition-all duration-300 h-full flex flex-col relative">
                    
                    <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-xl text-xs font-bold text-slate-800 flex items-center gap-2 shadow-sm z-10 border border-slate-100">
@@ -68,8 +63,13 @@ export default function NewsPage() {
                       {new Intl.DateTimeFormat('en-US', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(item.date))}
                    </div>
 
-                   <div className="h-56 bg-gradient-to-br from-slate-200 via-slate-100 to-slate-200 relative overflow-hidden flex items-center justify-center">
-                       <Newspaper className="h-16 w-16 text-slate-300 transform group-hover:scale-110 transition-transform duration-500" />
+                   <div className="h-56 relative overflow-hidden flex items-center justify-center bg-slate-100">
+                       <Image 
+                         src={item.image} 
+                         alt={item.title} 
+                         fill 
+                         className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                       />
                    </div>
                    
                    <div className="p-8 flex-1 flex flex-col bg-white relative z-20 -mt-4 rounded-t-2xl">
@@ -84,7 +84,7 @@ export default function NewsPage() {
                       </div>
                    </div>
                 </div>
-             </Link>
+             </a>
           ))}
         </div>
 
