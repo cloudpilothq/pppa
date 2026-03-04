@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { BookOpen, Calendar, ArrowRight, Tag } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { BLOG_POSTS } from '@/lib/blogData';
+import BlogGrid from '@/components/BlogGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,14 +8,6 @@ export const metadata: Metadata = {
   description: 'Insights, guides, and policy updates on property rights, land fraud prevention, and development regulations in Delta State from the DSPPPPA.',
 };
 
-const categoryColors: Record<string, string> = {
-  'Education': 'bg-blue-600',
-  'Consumer Guide': 'bg-orange-600',
-  'Policy Update': 'bg-purple-600',
-  'Know Your Rights': 'bg-red-600',
-  'Legal Guide': 'bg-emerald-600',
-  'Community Outreach': 'bg-teal-600',
-};
 
 export default function BlogPage() {
   return (
@@ -44,51 +35,9 @@ export default function BlogPage() {
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BLOG_POSTS.map((post) => (
-            <Link key={post.id} href={`/blog/${post.slug}`} className="group flex flex-col h-full">
-              <article className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/40 border border-slate-100 hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-200 transition-all duration-300 flex flex-col h-full">
-                <div className="h-56 relative overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className={`${categoryColors[post.category] ?? 'bg-slate-700'} text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg flex items-center gap-1`}>
-                      <Tag className="h-3 w-3" />
-                      {post.category}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 text-slate-500 text-sm mb-4">
-                    <Calendar className="h-4 w-4" />
-                    <span>{post.date}</span>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors line-clamp-2 leading-snug">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-slate-600 leading-relaxed text-sm mb-6 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="mt-auto pt-4 border-t border-slate-100">
-                    <span className="inline-flex items-center text-emerald-600 font-semibold text-sm gap-1 group-hover:gap-2 transition-all">
-                      Read Full Article <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
+        <BlogGrid posts={BLOG_POSTS} />
       </div>
+
     </div>
   );
 }

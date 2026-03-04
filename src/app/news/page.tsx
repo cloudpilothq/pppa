@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FACTUAL_NEWS } from '@/lib/newsData';
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 3;
 
 export default function NewsPage() {
   const [currentPage, setCurrentPage] = useState(1);
