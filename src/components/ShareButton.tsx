@@ -33,13 +33,13 @@ export default function ShareButton({ title, summary }: { title: string; summary
   return (
     <button
       onClick={handleShare}
-      className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-full border border-slate-200 transition-all"
+      className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-full border border-slate-200 transition-all"
       title={copied ? 'Link copied!' : 'Share Article'}
     >
       {copied ? (
         <>
-          <Check className="h-4 w-4 text-emerald-600" />
-          <span className="text-emerald-600">Copied!</span>
+          <Check className="h-4 w-4 text-blue-600" />
+          <span className="text-blue-600">Copied!</span>
         </>
       ) : (
         <>

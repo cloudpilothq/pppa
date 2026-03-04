@@ -24,15 +24,15 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="w-full bg-white border-b border-slate-200 sticky top-0 z-40">
         <div className="container mx-auto px-4 max-w-4xl py-4 flex items-center justify-between">
-          <Link href="/news" className="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors"><ArrowLeft className="h-4 w-4 mr-2" />Back to News</Link>
+          <Link href="/news" className="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"><ArrowLeft className="h-4 w-4 mr-2" />Back to News</Link>
           <ShareButton title={ITEM.title} summary={ITEM.summary} />
         </div>
       </div>
       <article className="container mx-auto px-4 max-w-4xl pt-12">
         <header className="mb-12">
           <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-500 mb-6">
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm"><Calendar className="h-4 w-4 text-emerald-600" />{new Intl.DateTimeFormat('en-NG', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(ITEM.date))}</div>
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm"><Clock className="h-4 w-4 text-emerald-600" />3 min read</div>
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm"><Calendar className="h-4 w-4 text-blue-600" />{new Intl.DateTimeFormat('en-NG', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(ITEM.date))}</div>
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm"><Clock className="h-4 w-4 text-blue-600" />3 min read</div>
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">{ITEM.title}</h1>
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed">{ITEM.summary}</p>
@@ -46,14 +46,14 @@ export default function Page() {
         <div className="mt-12 bg-slate-100 rounded-2xl p-6 border border-slate-200">
           <p className="text-sm font-semibold text-slate-700 mb-2">What the law says:</p>
           <ul className="space-y-1">
-            <li><Link href="/blog/illegal-development-levies-know-your-rights" className="text-emerald-700 hover:underline text-sm font-medium">→ Illegal Development Levies: Know Your Rights</Link></li>
-            <li><Link href="/blog/the-role-of-dsppppa-in-protecting-property-owners-in-delta-state" className="text-emerald-700 hover:underline text-sm font-medium">→ The Role of DSPPPPA in Protecting Property Owners</Link></li>
+            <li><Link href="/blog/illegal-development-levies-know-your-rights" className="text-blue-700 hover:underline text-sm font-medium">→ Illegal Development Levies: Know Your Rights</Link></li>
+            <li><Link href="/blog/the-role-of-dsppppa-in-protecting-property-owners-in-delta-state" className="text-blue-700 hover:underline text-sm font-medium">→ The Role of DSPPPPA in Protecting Property Owners</Link></li>
           </ul>
         </div>
-        <div className="mt-12 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
+        <div className="mt-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
           <h3 className="text-2xl font-bold mb-4">Report Illegal Structures</h3>
-          <p className="text-emerald-100 max-w-2xl mx-auto mb-8">Help us keep Delta State safe. Report illegal structures and unauthorized land use to the DSPPPPA today.</p>
-          <Link href="/report" className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1 inline-block">Report Now</Link>
+          <p className="text-blue-100 max-w-2xl mx-auto mb-8">Help us keep Delta State safe. Report illegal structures and unauthorized land use to the DSPPPPA today.</p>
+          <Link href="/report" className="bg-white text-blue-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1 inline-block">Report Now</Link>
         </div>
       </article>
     </div>

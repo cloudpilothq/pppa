@@ -47,15 +47,15 @@ export default function ReportPage() {
             <div className="relative bg-slate-900 text-white py-24 overflow-hidden mb-16">
                  {/* Background Effects */}
                 <div className="absolute inset-0 z-0">
-                  <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+                  <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
                   <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
                   <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
                 </div>
                  <div className="container mx-auto px-4 text-center relative z-10 animate-in fade-in zoom-in duration-500">
-                    <div className="w-24 h-24 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-emerald-500/20">
+                    <div className="w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-blue-500/20">
                         <CheckCircle className="h-12 w-12 text-white" />
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-200">Report Submitted</h1>
+                    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-200">Report Submitted</h1>
                     <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
                         Your complaint has been submitted. Thank you for reporting this to us. A member of our team will be in touch shortly.
                     </p>
@@ -103,36 +103,36 @@ export default function ReportPage() {
             <div className="lg:col-span-1 space-y-8 order-2 lg:order-1">
                 <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 sticky top-8">
                     <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                      <HelpCircle className="h-6 w-6 text-emerald-600" />
+                      <HelpCircle className="h-6 w-6 text-blue-600" />
                       What You Can Report
                     </h3>
                     <ul className="space-y-4 mb-10 text-slate-600">
                         <li className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                           <span className="leading-snug">Illegal &lsquo;deve&rsquo; levies or demands for unauthorised payments at a construction site</span>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                           <span className="leading-snug">Forceful or unlawful entry into your property or development site</span>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                           <span className="leading-snug">Illegal occupation of land or buildings</span>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                           <span className="leading-snug">Harassment, threats, or intimidation of developers, workers, or property owners</span>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                           <span className="leading-snug">Vandalism or theft at a development site</span>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                           <span className="leading-snug">Fraudulent or deceptive land practices</span>
                         </li>
                         <li className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0"></div>
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
                           <span className="leading-snug">Any other unlawful disruption of legitimate construction or development activity</span>
                         </li>
                     </ul>

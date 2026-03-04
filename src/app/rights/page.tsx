@@ -99,7 +99,7 @@ export default function RightsPage() {
                 <input
                   type="text"
                   placeholder="Search topics (e.g., eviction, deeds)..."
-                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -111,7 +111,7 @@ export default function RightsPage() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
                       selectedCategory === cat
-                        ? 'bg-emerald-600 text-white'
+                        ? 'bg-blue-600 text-white'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
@@ -133,8 +133,8 @@ export default function RightsPage() {
                     key={item.id} 
                     className={`bg-white rounded-xl border transition-all duration-300 overflow-hidden ${
                       isExpanded 
-                        ? 'border-emerald-500 shadow-md transform scale-[1.01]' 
-                        : 'border-slate-200 shadow-sm hover:border-emerald-400 hover:shadow-md'
+                        ? 'border-blue-500 shadow-md transform scale-[1.01]' 
+                        : 'border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md'
                     }`}
                   >
                     {/* Header (Clickable Area) */}
@@ -144,14 +144,14 @@ export default function RightsPage() {
                     >
                       <div className="flex gap-4">
                         <div className={`p-3 rounded-lg shrink-0 transition-colors ${
-                          isExpanded ? 'bg-emerald-100 text-emerald-600' : 'bg-blue-50 text-blue-600 group-hover:bg-emerald-50 group-hover:text-emerald-600'
+                          isExpanded ? 'bg-blue-100 text-blue-600' : 'bg-blue-50 text-blue-600 group-hover:bg-blue-50 group-hover:text-blue-600'
                         }`}>
                           <FileText className="h-6 w-6" />
                         </div>
                         <div>
-                          <div className="text-xs font-bold text-emerald-600 uppercase mb-1">{item.category}</div>
+                          <div className="text-xs font-bold text-blue-600 uppercase mb-1">{item.category}</div>
                           <h3 className={`text-lg font-bold mb-2 transition-colors ${
-                            isExpanded ? 'text-emerald-700' : 'text-slate-900 group-hover:text-emerald-700'
+                            isExpanded ? 'text-blue-700' : 'text-slate-900 group-hover:text-blue-700'
                           }`}>
                             {item.title}
                           </h3>
@@ -160,9 +160,9 @@ export default function RightsPage() {
                       </div>
                       <div className="shrink-0 ml-4 pt-4">
                         {isExpanded ? (
-                          <ChevronDown className="h-5 w-5 text-emerald-500 transition-transform duration-300" />
+                          <ChevronDown className="h-5 w-5 text-blue-500 transition-transform duration-300" />
                         ) : (
-                          <ChevronRight className="h-5 w-5 text-slate-400 group-hover:text-emerald-500 transition-transform duration-300" />
+                          <ChevronRight className="h-5 w-5 text-slate-400 group-hover:text-blue-500 transition-transform duration-300" />
                         )}
                       </div>
                     </div>

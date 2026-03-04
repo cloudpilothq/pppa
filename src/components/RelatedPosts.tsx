@@ -16,9 +16,9 @@ export default function RelatedPosts({ currentSlug, maxPosts = 3 }: RelatedPosts
   return (
     <div className="mt-16">
       <div className="flex items-center gap-3 mb-8">
-        <div className="h-10 w-1 bg-emerald-600 rounded-full"></div>
+        <div className="h-10 w-1 bg-blue-600 rounded-full"></div>
         <div>
-          <div className="flex items-center gap-2 text-emerald-600 text-sm font-semibold mb-0.5">
+          <div className="flex items-center gap-2 text-blue-600 text-sm font-semibold mb-0.5">
             <BookOpen className="h-4 w-4" />
             <span>Continue Reading</span>
           </div>
@@ -29,7 +29,7 @@ export default function RelatedPosts({ currentSlug, maxPosts = 3 }: RelatedPosts
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {related.map((post) => (
           <Link key={post.id} href={`/blog/${post.slug}`} className="group flex flex-col">
-            <div className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-emerald-200 transition-all duration-300 flex flex-col h-full">
+            <div className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 flex flex-col h-full">
               <div className="relative h-40 overflow-hidden">
                 <Image
                   src={post.image}
@@ -40,11 +40,11 @@ export default function RelatedPosts({ currentSlug, maxPosts = 3 }: RelatedPosts
                 />
               </div>
               <div className="p-5 flex flex-col flex-grow">
-                <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">{post.category}</span>
-                <h3 className="text-base font-bold text-slate-900 line-clamp-2 group-hover:text-emerald-600 transition-colors mb-4 leading-snug">
+                <span className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">{post.category}</span>
+                <h3 className="text-base font-bold text-slate-900 line-clamp-2 group-hover:text-blue-600 transition-colors mb-4 leading-snug">
                   {post.title}
                 </h3>
-                <div className="mt-auto flex items-center text-emerald-600 text-sm font-semibold gap-1 group-hover:gap-2 transition-all">
+                <div className="mt-auto flex items-center text-blue-600 text-sm font-semibold gap-1 group-hover:gap-2 transition-all">
                   Read More <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </div>

@@ -9,13 +9,13 @@ export default function AboutPage() {
       <div className="relative bg-slate-900 text-white py-24 md:py-32 overflow-hidden mb-16">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm mb-6 max-w-full">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-medium backdrop-blur-sm mb-6 max-w-full">
             <Shield className="h-4 w-4 shrink-0" />
             <span className="truncate whitespace-normal text-left">Welcome to the Delta State Public and Private Property Protection Agency</span>
           </div>

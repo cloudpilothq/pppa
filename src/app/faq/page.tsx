@@ -76,13 +76,13 @@ export default function FAQPage() {
       <div className="relative bg-slate-900 text-white py-24 mb-16 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-900/40 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/40 border border-blue-500/30 text-blue-400 text-sm font-medium backdrop-blur-sm mb-6">
             <HelpCircle className="h-4 w-4" />
             <span>Frequently Asked Questions</span>
           </div>
@@ -103,20 +103,20 @@ export default function FAQPage() {
                 key={index} 
                 className={`border rounded-2xl transition-all duration-300 overflow-hidden ${
                   openIndex === index 
-                    ? 'border-emerald-200 bg-emerald-50/30' 
-                    : 'border-slate-200 bg-white hover:border-emerald-200 hover:bg-slate-50'
+                    ? 'border-blue-200 bg-blue-50/30' 
+                    : 'border-slate-200 bg-white hover:border-blue-200 hover:bg-slate-50'
                 }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-2xl"
+                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-2xl"
                   aria-expanded={openIndex === index}
                 >
-                  <span className={`text-lg font-bold pr-6 transition-colors ${openIndex === index ? 'text-emerald-900' : 'text-slate-800'}`}>
+                  <span className={`text-lg font-bold pr-6 transition-colors ${openIndex === index ? 'text-blue-900' : 'text-slate-800'}`}>
                     {faq.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
-                    openIndex === index ? 'bg-emerald-100 text-emerald-600 rotate-180' : 'bg-slate-100 text-slate-400'
+                    openIndex === index ? 'bg-blue-100 text-blue-600 rotate-180' : 'bg-slate-100 text-slate-400'
                   }`}>
                     <ChevronDown className="h-5 w-5" />
                   </div>
@@ -132,7 +132,7 @@ export default function FAQPage() {
                       {faq.answer.includes('File a Complaint page') ? (
                         <p>
                           {faq.answer.split('File a Complaint page')[0]}
-                          <Link href="/report" className="text-emerald-600 font-medium hover:underline">
+                          <Link href="/report" className="text-blue-600 font-medium hover:underline">
                             File a Complaint page
                           </Link>
                           {faq.answer.split('File a Complaint page')[1]}
@@ -151,11 +151,11 @@ export default function FAQPage() {
         {/* CTA Section */}
         <section className="bg-slate-900 border border-slate-800 rounded-3xl p-10 md:p-16 text-center shadow-xl relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
           
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
-            <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mb-6">
-                <MessageSquare className="h-8 w-8 text-emerald-400" />
+            <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mb-6">
+                <MessageSquare className="h-8 w-8 text-blue-400" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Still have questions?</h2>
             <p className="text-slate-300 text-lg leading-relaxed mb-8">

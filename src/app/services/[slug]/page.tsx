@@ -172,7 +172,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <div className="relative bg-slate-900 text-white min-h-[400px] flex items-center overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
         </div>
@@ -183,7 +183,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             Back to Services
           </Link>
           <div className="flex items-start gap-6 flex-col md:flex-row">
-            <div className="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-emerald-500/20">
+            <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
                <Icon className="h-8 w-8 text-white" />
             </div>
             <div>
@@ -214,7 +214,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {service.keyFeatures.map((feature, idx) => (
                               <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                  <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0" />
+                                  <CheckCircle className="h-5 w-5 text-blue-500 shrink-0" />
                                   <span className="font-medium text-slate-700">{feature}</span>
                               </div>
                           ))}
@@ -232,7 +232,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                         <div className="space-y-6 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200">
                              {service.process.map((step, idx) => (
                                  <div key={idx} className="relative pl-10">
-                                    <div className="absolute left-0 top-0 w-6 h-6 bg-emerald-500 text-white text-xs font-bold rounded-full flex items-center justify-center border-4 border-slate-50">
+                                    <div className="absolute left-0 top-0 w-6 h-6 bg-blue-500 text-white text-xs font-bold rounded-full flex items-center justify-center border-4 border-slate-50">
                                         {idx + 1}
                                     </div>
                                     <h4 className="font-bold text-slate-800 text-sm">{step.title}</h4>
@@ -244,7 +244,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
                      <Link 
                         href={service.ctaLink}
-                        className="block w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center rounded-xl shadow-lg shadow-emerald-500/30 transition-all hover:-translate-y-1"
+                        className="block w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-center rounded-xl shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-1"
                      >
                         {service.ctaText}
                      </Link>

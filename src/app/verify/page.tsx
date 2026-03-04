@@ -30,13 +30,13 @@ export default function VerifyPage() {
       <div className="relative bg-slate-900 text-white py-24 overflow-hidden mb-16">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
         </div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-sm font-medium backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-medium backdrop-blur-sm mb-6">
             <ShieldCheck className="h-4 w-4" />
             <span>Public Registry Access</span>
           </div>
@@ -68,13 +68,13 @@ export default function VerifyPage() {
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value)}
                                 placeholder="e.g. FCT/ABJ/2025/LAND/9928" 
-                                className="block w-full pl-10 p-4 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all font-mono uppercase"
+                                className="block w-full pl-10 p-4 rounded-xl border border-slate-300 bg-slate-50 text-slate-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-mono uppercase"
                             />
                         </div>
                         <button 
                             type="submit"
                             disabled={status === 'loading' || !query}
-                            className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/30 transition-all flex items-center justify-center gap-2 min-w-[160px]"
+                            className="px-8 py-4 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2 min-w-[160px]"
                         >
                             {status === 'loading' ? (
                                 <div className="h-5 w-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -90,22 +90,22 @@ export default function VerifyPage() {
 
                 {/* Results Display */}
                 {status === 'success' && (
-                    <div className="mt-8 p-6 bg-emerald-50 border border-emerald-200 rounded-xl animate-in fade-in slide-in-from-bottom-2">
+                    <div className="mt-8 p-6 bg-blue-50 border border-blue-200 rounded-xl animate-in fade-in slide-in-from-bottom-2">
                         <div className="flex items-start gap-4">
-                            <div className="bg-emerald-100 p-2 rounded-full shrink-0">
-                                <CheckCircle className="h-6 w-6 text-emerald-600" />
+                            <div className="bg-blue-100 p-2 rounded-full shrink-0">
+                                <CheckCircle className="h-6 w-6 text-blue-600" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-emerald-800 text-lg">Document Valid & Active</h3>
-                                <p className="text-emerald-700/80 mt-1">The ID <strong>{query.toUpperCase()}</strong> matches an active record in our database.</p>
+                                <h3 className="font-bold text-blue-800 text-lg">Document Valid & Active</h3>
+                                <p className="text-blue-700/80 mt-1">The ID <strong>{query.toUpperCase()}</strong> matches an active record in our database.</p>
                                 <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
                                     <div className="bg-white/50 p-3 rounded">
-                                        <span className="block text-emerald-600/70 text-xs uppercase tracking-wider">Owner Type</span>
-                                        <span className="font-semibold text-emerald-900">Private Entity</span>
+                                        <span className="block text-blue-600/70 text-xs uppercase tracking-wider">Owner Type</span>
+                                        <span className="font-semibold text-blue-900">Private Entity</span>
                                     </div>
                                     <div className="bg-white/50 p-3 rounded">
-                                        <span className="block text-emerald-600/70 text-xs uppercase tracking-wider">Status</span>
-                                        <span className="font-semibold text-emerald-900">Allocated</span>
+                                        <span className="block text-blue-600/70 text-xs uppercase tracking-wider">Status</span>
+                                        <span className="font-semibold text-blue-900">Allocated</span>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ export default function VerifyPage() {
         {/* Security Features */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-                <div className="flex items-center gap-3 mb-6 text-emerald-700">
+                <div className="flex items-center gap-3 mb-6 text-blue-700">
                     <ShieldCheck className="h-6 w-6" />
                     <h3 className="text-xl font-bold">Security Features Check</h3>
                 </div>
@@ -147,7 +147,7 @@ export default function VerifyPage() {
                          "Digital Signature of the Director General"
                      ].map((item, i) => (
                          <li key={i} className="flex items-start gap-3 text-slate-600">
-                             <CheckCircle className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" />
+                             <CheckCircle className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
                              <span>{item}</span>
                          </li>
                      ))}
