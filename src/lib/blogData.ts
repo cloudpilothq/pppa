@@ -99,5 +99,95 @@ export const BLOG_POSTS: BlogPost[] = [
       "It is important to note that the Administration of Estates Law in Delta State applies primarily to individuals married under the Marriage Act (a statutory or church marriage). For those who married under customary law, the distribution of the estate is governed by the relevant customary law of the deceased's community — though this too can be contested in court if a valid statutory will exists.",
       "Failure to properly administer a deceased person's estate is a major source of property disputes in Delta State. When estates are not formally administered, land is often occupied by relatives without clear legal title, leading to conflicts several years or decades later. The DSPPPPA strongly encourages families to begin the estate administration process promptly after a death and to consult a qualified legal practitioner to guide them through the process correctly.",
     ]
-  }
+  },
+  {
+    id: 7,
+    slug: "how-to-verify-land-ownership-before-buying-in-delta-state",
+    title: "How to Verify Land Ownership Before Buying Property in Delta State",
+    excerpt: "Before handing over your money, every smart buyer must conduct a thorough verification of land ownership at the Delta State Lands Registry. Here is exactly how to do it.",
+    date: "December 20, 2025",
+    category: "Consumer Guide",
+    image: "/blog/blog_verify_land_1772632718471.png",
+    content: [
+      "Purchasing land without verifying ownership is one of the most common and costly mistakes property buyers make in Delta State. Fraudulent sellers rely on buyers skipping due diligence — and the consequences can be devastating, from losing your investment to landing in a years-long court dispute. The good news is that the verification process is systematic, accessible, and highly effective when done correctly.",
+      "The first and most critical step is conducting an official search at the Delta State Lands Registry located in Asaba. You, your lawyer, or a licensed estate surveyor can apply for a search by submitting the plot number, survey plan, and the name of the alleged owner. The registry will confirm whether the title has been registered, who the current registered occupier is, and whether the property has any encumbrances, such as a mortgage or legal charge, attached to it.",
+      "Alongside the registry search, you should also verify the survey plan with the Delta State Surveyor-General's office. A legitimate survey plan carries the registration number and official seal of a licensed surveyor. The Surveyor-General's office can confirm whether the plan was prepared by a registered surveyor and whether the coordinates of the land do not overlap with government reservations, adjoining properties, or road setbacks.",
+      "Finally, visit the physical site with the seller and the survey plan. Confirm that the boundaries stated in the survey plan match the markers on the ground. Talk to neighboring property owners to ask about the history of the land and whether the seller actually has possession. This combination of registry search, survey verification, and physical inspection will firmly protect your investment.",
+    ]
+  },
+  {
+    id: 8,
+    slug: "the-role-of-dsppppa-in-protecting-property-owners-in-delta-state",
+    title: "The Role of the DSPPPPA in Protecting Property Owners in Delta State",
+    excerpt: "Established by law to protect public and private property, the DSPPPPA plays a vital role in ensuring a secure and orderly property environment across Delta State.",
+    date: "December 10, 2025",
+    category: "Education",
+    image: "/blog/blog_dsppppa_role_1772632813905.png",
+    content: [
+      "The Delta State Public and Private Properties Protection Agency — commonly known as the DSPPPPA — is a statutory body created by the Delta State Public and Private Properties Protection Law of 2018. Its core mandate is to protect property rights, enforce state land laws, and prevent illegal activities on both government-owned and privately held lands across the 25 local government areas of Delta State.",
+      "One of the agency's most visible functions is enforcement — the investigation and physical response to reported violations of property rights. When a property owner reports illegal trespass, forced occupation, or the destruction of boundary structures, DSPPPPA officers are empowered to visit the site, caution offenders, and initiate prosecution where necessary. The agency works closely with the Nigeria Police Force, the State Ministry of Lands, and the State Attorney-General's office.",
+      "Beyond enforcement, the DSPPPPA also plays an important role in sensitization and public education. Through community outreach programs, town halls, and publications, the agency educates communities, market associations, landlords, and developers about their rights and obligations under Delta State property law. This includes informing the public about the dangers of illegal 'deve' levies and the importance of obtaining a Certificate of Occupancy.",
+      "The agency also provides dispute resolution support by offering mediation between parties involved in property conflicts before cases escalate to the courts. This has proved to be an effective and cost-efficient way to resolve boundary disputes, landlord-tenant conflicts, and family property disagreements. Citizens who wish to access DSPPPPA services can visit any of its offices or file complaints through the official reporting channels.",
+    ]
+  },
+  {
+    id: 9,
+    slug: "common-property-disputes-in-delta-state-and-how-to-resolve-them",
+    title: "Common Property Disputes in Delta State and How to Resolve Them",
+    excerpt: "Property disputes are among the most common legal conflicts in Delta State. Understanding the most frequent types and knowing the right resolution channels can save you time, money, and stress.",
+    date: "November 28, 2025",
+    category: "Legal Guide",
+    image: "/blog/blog_property_dispute_1772632829279.png",
+    content: [
+      "Property disputes in Delta State typically arise from a predictable set of circumstances: unclear boundaries, multiple sales of the same land, inheritance conflicts, landlord-tenant disagreements, and encroachment by neighbors or government agencies. Understanding which category your dispute falls into is the first step toward choosing the most effective resolution path.",
+      "Boundary disputes are the most frequent and arise when neighbors disagree about where one property ends and another begins. These conflicts are best resolved by engaging a licensed surveyor to conduct a fresh boundary survey and mark the correct corners using the registered coordinates from the original survey plans. Where both parties agree with the result, a mutual delineation deed can be drawn up and registered to prevent future recurrence.",
+      "Inheritance disputes, which often arise when multiple family members lay claim to a deceased person's property, require a careful review of the estate administration process. If the deceased left a valid will, the executor named should apply for Probate at the Delta State High Court. Without a will, Letters of Administration must be obtained before any legal transfer of property to heirs can occur.",
+      "Landlord-tenant disputes are increasingly governed by the proposed Delta State Landlord and Tenant Law 2025, which is before the state legislature. Tenants have the right to adequate notice before eviction, and landlords cannot recover possession by force. For both categories, the DSPPPPA encourages early mediation as the first step before formal litigation.",
+    ]
+  },
+  {
+    id: 10,
+    slug: "understanding-the-land-use-act-1978-and-its-impact-on-delta-state",
+    title: "Understanding the Land Use Act 1978 and Its Impact on Delta State Property Owners",
+    excerpt: "The Land Use Act of 1978 is arguably the most important piece of legislation affecting land ownership in Nigeria. Every Delta State landowner must understand what it says.",
+    date: "November 14, 2025",
+    category: "Education",
+    image: "/blog/blog_land_use_act_1772632848238.png",
+    content: [
+      "Enacted as a Federal Decree in 1978 and later entrenched in the 1979 Constitution, the Land Use Act fundamentally restructured land ownership in Nigeria. Under this law, all land within each state is vested in the Governor of that state, who holds it in trust for the people. This effectively abolished freehold ownership — no individual or institution can claim absolute ownership of land in Nigeria under the Act.",
+      "For residents of Delta State, this means that what every landholder actually possesses is a 'right of occupancy' — either a statutory right of occupancy granted by the Governor through a Certificate of Occupancy (C of O), or a customary right of occupancy recognized for agricultural or semi-urban land in rural areas. Any transfer of such right requires the Governor's consent to be legally valid.",
+      "The requirement for Governor's consent on transactions is one of the most practically significant provisions of the Act for Delta State property owners. When you buy land with a registered C of O and want the title transferred into your name, you must apply to the Delta State Ministry of Lands and Survey for Governor's Consent. Without this consent, the transaction has no legal force against third parties or the government.",
+      "Critics of the Land Use Act argue that it has stifled the use of land as collateral for financing, since banks are reluctant to accept land titles that require government consent to transfer. Successive administrations have repeatedly debated its repeal or reform, but it remains in force as of today. Delta State property owners should factor this legal reality into all their property planning decisions.",
+    ]
+  },
+  {
+    id: 11,
+    slug: "mortgages-and-property-financing-in-delta-state",
+    title: "Mortgages and Property Financing in Delta State: What You Need to Know",
+    excerpt: "Owning property in Delta State through a mortgage is possible, but requires navigating specific legal and financial requirements. This guide explains the process from application to title registration.",
+    date: "November 1, 2025",
+    category: "Consumer Guide",
+    image: "/blog/blog_mortgage_1772632862844.png",
+    content: [
+      "A mortgage is a legal agreement in which a borrower uses their property or land as collateral to secure a loan from a financial institution. In Delta State, mortgages are primarily regulated by the Land Use Act of 1978 and relevant provisions in the Delta State property registry system. For a mortgage to be legally enforceable, the property used as collateral must carry a registered title — ideally a Certificate of Occupancy (C of O) — and the mortgage deed must be registered at the Delta State Lands Registry.",
+      "The process of obtaining a mortgage from a commercial bank in Delta State typically begins with the bank requesting a formal valuation of the property by a registered estate surveyor. This valuation report determines the market value and the maximum loan amount the bank is willing to offer — usually between 60% and 70% Loan-to-Value (LTV). The bank then conducts a legal search at the Lands Registry to confirm clean title before proceeding.",
+      "An important hurdle in Delta State mortgage transactions is the requirement for the Governor's Consent when mortgaging a property with an existing C of O. The bank's legal team will typically handle this application, but the borrower must factor in both the cost and the processing time involved, which can take several weeks to months. Mortgage applicants should also budget for stamp duty, registration fees, legal fees, and insurance premiums.",
+      "The Federal Mortgage Bank of Nigeria (FMBN) also provides housing finance options through the National Housing Fund (NHF) scheme, offering relatively long-term loans at concessionary interest rates to eligible Nigerian workers. First-time homebuyers in Delta State should explore this option alongside conventional commercial mortgages for the best financing terms.",
+    ]
+  },
+  {
+    id: 12,
+    slug: "building-permits-and-development-approvals-in-delta-state",
+    title: "Building Permits and Development Approvals in Delta State: A Complete Guide",
+    excerpt: "Starting construction without the proper approvals is illegal in Delta State and can result in demolition of your structure. Here is everything you need to know about the process.",
+    date: "October 18, 2025",
+    category: "Policy Update",
+    image: "/blog/blog_building_permit_1772632882115.png",
+    content: [
+      "Every new building, major renovation, or land subdivision in Delta State requires prior approval from the relevant government authority before construction commences. This requirement is enforced under the Delta State Urban and Regional Planning Law and aligned with the National Building Code. Failure to obtain the necessary approvals before building exposes a property owner to Stop Work Orders, heavy fines, or court-mandated demolition of the structure.",
+      "The primary authority responsible for issuing development approvals in urban areas of Delta State is the Delta State Urban and Regional Planning Board, with delegated functions exercised by Local Government Planning Authorities in peri-urban and rural areas. To apply for development approval, a property owner must submit architectural drawings prepared by a registered architect, a structural engineer's report, evidence of valid land title, and proof of payment of the assessment fee.",
+      "Once the application is submitted, the Planning Authority reviews the proposed development against the approved master plan for the area, zoning regulations, environmental impact considerations, and setback requirements from roads and waterways. The Development Permit that is issued stipulates the specific conditions under which construction may proceed, and must be displayed on the building site throughout construction.",
+      "The DSPPPPA works in coordination with the Delta State Urban and Regional Planning Board to flag unauthorized constructions, particularly in waterfront zones, road setbacks, and government reservations. Citizens and property developers are strongly urged to obtain all required approvals before laying a single foundation block. Contact your nearest DSPPPPA office for guidance before you begin construction.",
+    ]
+  },
 ];
