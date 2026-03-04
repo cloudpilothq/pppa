@@ -45,7 +45,7 @@ export default function Page() {
           <Image src={POST.image} alt={POST.title} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 800px" />
         </div>
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-          {POST.content.map((paragraph, i) => (<p key={i} className="text-slate-700 leading-relaxed text-[17px]">{paragraph}</p>))}
+          {POST.content.map((paragraph, i) => (<p key={i} className="text-slate-700 leading-relaxed text-[17px] text-justify">{paragraph}</p>))}
         </div>
         <div className="mt-12 bg-slate-100 rounded-2xl p-6 border border-slate-200">
           <p className="text-sm font-semibold text-slate-700 mb-2">Protect yourself further — read these:</p>
