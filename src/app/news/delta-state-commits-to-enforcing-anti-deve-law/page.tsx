@@ -2,70 +2,58 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, ArrowLeft, Clock } from 'lucide-react';
 import ShareButton from '@/components/ShareButton';
+import { FACTUAL_NEWS } from '@/lib/newsData';
 import type { Metadata } from 'next';
 
+const ITEM = FACTUAL_NEWS[3];
+const BASE_URL = 'https://dsppppa.delta.gov.ng';
+
 export const metadata: Metadata = {
-  title: 'Delta State Commits to Enforcing Anti-Deve Law | DSPPPPA News',
-  description: 'To create a secure investor environment, the state government is strictly enforcing the Public and Private Properties Protection Law to end illegal development levies.',
+  title: `${ITEM.title} | DSPPPPA News`,
+  description: ITEM.summary,
+  openGraph: { title: ITEM.title, description: ITEM.summary, url: `${BASE_URL}/news/${ITEM.slug}`, siteName: 'DSPPPPA Delta State', images: [{ url: `${BASE_URL}${ITEM.image}`, width: 1200, height: 630, alt: ITEM.title }], type: 'article', locale: 'en_NG' },
+  twitter: { card: 'summary_large_image', title: ITEM.title, description: ITEM.summary, images: [`${BASE_URL}${ITEM.image}`] },
+  alternates: { canonical: `${BASE_URL}/news/${ITEM.slug}` },
 };
+
+const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: ITEM.title, description: ITEM.summary, image: `${BASE_URL}${ITEM.image}`, datePublished: ITEM.date, author: { '@type': 'Organization', name: 'DSPPPPA Delta State' }, publisher: { '@type': 'Organization', name: 'DSPPPPA Delta State', url: BASE_URL }, url: `${BASE_URL}/news/${ITEM.slug}` };
 
 export default function Page() {
   return (
     <div className="bg-slate-50 min-h-screen pb-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="w-full bg-white border-b border-slate-200 sticky top-0 z-40">
         <div className="container mx-auto px-4 max-w-4xl py-4 flex items-center justify-between">
-          <Link href="/news" className="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">
-            <ArrowLeft className="h-4 w-4 mr-2" />Back to News
-          </Link>
-          <ShareButton
-            title="Delta State Commits to Enforcing Anti-Deve Law"
-            summary="To create a secure investor environment, the state government is strictly enforcing the Public and Private Properties Protection Law to end illegal development levies."
-          />
+          <Link href="/news" className="inline-flex items-center text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors"><ArrowLeft className="h-4 w-4 mr-2" />Back to News</Link>
+          <ShareButton title={ITEM.title} summary={ITEM.summary} />
         </div>
       </div>
-
       <article className="container mx-auto px-4 max-w-4xl pt-12">
         <header className="mb-12">
           <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-500 mb-6">
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm">
-              <Calendar className="h-4 w-4 text-emerald-600" />March 25, 2024
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm">
-              <Clock className="h-4 w-4 text-emerald-600" />2 min read
-            </div>
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm"><Calendar className="h-4 w-4 text-emerald-600" />{new Intl.DateTimeFormat('en-NG', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(ITEM.date))}</div>
+            <div className="flex items-center gap-1.5 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm"><Clock className="h-4 w-4 text-emerald-600" />3 min read</div>
           </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
-            Delta State Commits to Enforcing Anti-Deve Law
-          </h1>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed text-justify">
-            To create a secure investor environment, the state government is strictly enforcing the Public and Private Properties Protection Law to end illegal development levies.
-          </p>
+          <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">{ITEM.title}</h1>
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">{ITEM.summary}</p>
         </header>
-
         <div className="relative w-full aspect-[16/9] md:aspect-[2/1] rounded-3xl overflow-hidden mb-16 shadow-2xl shadow-slate-200/50 border border-slate-100">
-          <Image src="/news/news_anti_deve_law_1772545928184.png" alt="Delta State Anti-Deve Law Enforcement" fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 800px" />
+          <Image src={ITEM.image} alt={ITEM.title} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 800px" />
         </div>
-
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 space-y-6">
-          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
-            In a decisive move to foster a more secure and investor-friendly environment, the Delta State government has reiterated its unwavering commitment to the strict enforcement of the Public and Private Properties Protection Law of 2018. Widely known across the state as the &apos;Anti-Deve law,&apos; this legislation is a critical tool in the government&apos;s effort to safeguard property rights and regulate lawful land development.
-          </p>
-          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
-            The Anti-Deve law explicitly criminalizes the persistent and illegal collection of development levies, often extorted from legitimate land developers by unauthorized community groups or syndicates. By strictly applying this law, the state government aims to permanently eradicate the extortion practices that have historically deterred investors and delayed essential construction projects.
-          </p>
-          <p className="text-slate-700 leading-relaxed text-[17px] text-justify">
-            Violators found guilty under the provisions of the Public and Private Properties Protection Law face stringent penalties. These include a minimum two-year jail term, a substantial fine of N1 million, or occasionally both. Furthermore, the law directly addresses the fraudulent practice of selling a single landed property to multiple buyers, stipulating up to five years imprisonment for such offenses.
-          </p>
+          {ITEM.content.map((paragraph, i) => (<p key={i} className="text-slate-700 leading-relaxed text-[17px]">{paragraph}</p>))}
         </div>
-
-        <div className="mt-16 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
-          <h3 className="text-2xl font-bold mb-4">Stay Informed Ahead of Time</h3>
-          <p className="text-emerald-100 max-w-2xl mx-auto mb-8">
-            Sign up for email alerts to immediately receive crucial updates regarding verified property regulations and enforcement operations in your community.
-          </p>
-          <button className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1">
-            Subscribe to Alerts
-          </button>
+        <div className="mt-12 bg-slate-100 rounded-2xl p-6 border border-slate-200">
+          <p className="text-sm font-semibold text-slate-700 mb-2">What the law says:</p>
+          <ul className="space-y-1">
+            <li><Link href="/blog/illegal-development-levies-know-your-rights" className="text-emerald-700 hover:underline text-sm font-medium">→ Illegal Development Levies: Know Your Rights</Link></li>
+            <li><Link href="/blog/the-role-of-dsppppa-in-protecting-property-owners-in-delta-state" className="text-emerald-700 hover:underline text-sm font-medium">→ The Role of DSPPPPA in Protecting Property Owners</Link></li>
+          </ul>
+        </div>
+        <div className="mt-12 bg-gradient-to-br from-emerald-600 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
+          <h3 className="text-2xl font-bold mb-4">Report Illegal Structures</h3>
+          <p className="text-emerald-100 max-w-2xl mx-auto mb-8">Help us keep Delta State safe. Report illegal structures and unauthorized land use to the DSPPPPA today.</p>
+          <Link href="/report" className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:-translate-y-1 inline-block">Report Now</Link>
         </div>
       </article>
     </div>
