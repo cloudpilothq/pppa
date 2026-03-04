@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Shield, Globe, Users, FileText, Scale, Search, HardHat, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Shield, Users, FileText, Scale, Search, HardHat, TrendingUp, Calendar } from "lucide-react";
+import { FACTUAL_NEWS } from "@/lib/newsData";
+
+const LATEST_NEWS = FACTUAL_NEWS.slice(0, 3);
 
 export default function HomePage() {
   return (
@@ -211,59 +215,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Recent News Preview */}
-      <section className="py-20 bg-background">
+      {/* Latest Updates */}
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Latest Updates</h2>
-              <p className="text-slate-600">News, announcements, and press releases.</p>
+              <span className="text-emerald-600 font-bold tracking-wider text-sm uppercase mb-2 block">Breaking & Latest</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Latest Updates</h2>
+              <p className="text-slate-600">News, announcements, and press releases from the DSPPPPA.</p>
             </div>
-            <Link href="/news" className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center">
+            <Link href="/news" className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 transition-colors gap-1 shrink-0">
               View All News <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Q1 Property Compliance Report Released",
-                date: "Jan 12, 2026",
-                category: "Report",
-                summary: "The agency has released the quarterly compliance figures showing a 15% increase in verified assets.",
-              },
-              {
-                title: "New Public Asset Protection Law",
-                date: "Jan 05, 2026",
-                category: "Legislation",
-                summary: "Understanding the new amendments to the Public Property Protection Act of 2025.",
-              },
-              {
-                title: "Community Outreach Program Launch",
-                date: "Dec 28, 2025",
-                category: "Events",
-                summary: "Join us for a series of town hall meetings discussing local property rights.",
-              },
-            ].map((news, i) => (
-              <div key={i} className="border border-slate-200 rounded-lg overflow-hidden hover:border-emerald-500 transition-colors group cursor-pointer">
-                <div className="bg-slate-100 h-48 w-full flex items-center justify-center text-slate-400">
-                  <Globe className="h-12 w-12" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-600 mb-2">
-                    {news.category} • {news.date}
+            {LATEST_NEWS.map((item) => (
+              <Link key={item.id} href={`/news/${item.slug}`} className="group flex flex-col h-full">
+                <article className="bg-white rounded-2xl overflow-hidden shadow-lg shadow-slate-200/40 border border-slate-100 hover:-translate-y-2 hover:shadow-2xl hover:border-emerald-200 transition-all duration-300 flex flex-col h-full">
+                  <div className="h-52 relative overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-white text-xs font-semibold">
+                      <Calendar className="h-3.5 w-3.5" />
+                      {new Intl.DateTimeFormat('en-NG', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(item.date))}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-700">
-                    {news.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm line-clamp-3">
-                    {news.summary}
-                  </p>
-                </div>
-              </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors leading-snug line-clamp-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-5">
+                      {item.summary}
+                    </p>
+                    <div className="mt-auto flex items-center text-emerald-600 text-sm font-semibold gap-1 group-hover:gap-2 transition-all">
+                      Read Full Story <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Call to Action Section */}
       <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
