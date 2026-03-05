@@ -4,7 +4,7 @@ import { Shield, Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide
 
 export function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t border-slate-800">
+    <footer className="bg-blue-950 text-slate-300 border-t border-blue-900">
       <div className="container mx-auto py-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
@@ -77,7 +77,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+        <div className="border-t border-blue-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
           <p>© {new Date().getFullYear()} DSPPPPA. All rights reserved.</p>
           <div className="flex gap-8">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
