@@ -9,41 +9,41 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-white text-slate-900 py-24 lg:py-32 overflow-hidden items-center flex border-b border-slate-100">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-24 lg:py-32 overflow-hidden items-center flex border-b border-blue-800">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-blue-100 rounded-full filter blur-3xl opacity-60"></div>
-          <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-blue-50 rounded-full filter blur-3xl opacity-70"></div>
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5 bg-center"></div>
+          <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
+          <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-blue-400 rounded-full filter blur-3xl opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-semibold mx-auto mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-800/50 border border-blue-400/30 text-blue-200 text-sm font-semibold mx-auto mb-6 backdrop-blur-sm">
               <Shield className="h-4 w-4" />
               <span>Official Delta State Public and Private Property Protection Agency (DSPPPPA)</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight text-slate-900">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight text-white">
               Safeguarding Assets, <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">Ensuring Public Trust.</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-100">Ensuring Public Trust.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
               The Delta State Public and Private Property Protection Agency (DSPPPPA) safeguards your right to develop, invest, and build — free from illegal levies, harassment, and unlawful interference.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <Link
                 href="/rights"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25 active:scale-95 transform"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-900 bg-white rounded-lg hover:bg-blue-50 transition-all shadow-lg active:scale-95 transform"
               >
                 Know Your Rights
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-700 border-2 border-blue-200 bg-blue-50 rounded-lg hover:bg-blue-100 hover:border-blue-300 transition-all active:scale-95 transform"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white border-2 border-blue-400/50 bg-blue-800/30 rounded-lg hover:bg-blue-800/50 hover:border-blue-400 transition-all active:scale-95 transform backdrop-blur-sm"
               >
                 Our Services
               </Link>
@@ -51,6 +51,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
 
 
       {/* Quick Access Grid */}
