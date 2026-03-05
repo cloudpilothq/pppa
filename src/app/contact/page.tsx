@@ -45,7 +45,7 @@ export default function ContactPage() {
   return (
     <div className="bg-slate-50 min-h-screen pb-16">
       {/* Hero Header */}
-      <div className="relative bg-slate-900 text-white py-24 mb-16 overflow-hidden">
+      <div className="relative bg-blue-950 text-white py-24 mb-16 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -197,7 +197,7 @@ export default function ContactPage() {
         </div>
 
         {/* CTA Section */}
-        <section className="bg-slate-900 border border-slate-800 rounded-3xl p-10 md:p-16 text-center shadow-xl relative overflow-hidden">
+        <section className="bg-blue-950 border border-blue-900 rounded-3xl p-10 md:p-16 text-center shadow-xl relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
           

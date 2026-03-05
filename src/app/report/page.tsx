@@ -44,7 +44,7 @@ export default function ReportPage() {
   if (submitted) {
     return (
         <div className="bg-slate-50 min-h-screen pb-16">
-            <div className="relative bg-slate-900 text-white py-24 overflow-hidden mb-16">
+            <div className="relative bg-blue-950 text-white py-24 overflow-hidden mb-16">
                  {/* Background Effects */}
                 <div className="absolute inset-0 z-0">
                   <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -74,7 +74,7 @@ export default function ReportPage() {
   return (
     <div className="bg-slate-50 min-h-screen pb-24">
       {/* Hero Header */}
-      <div className="relative bg-slate-900 text-white py-24 mb-16 overflow-hidden">
+      <div className="relative bg-blue-950 text-white py-24 mb-16 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>

@@ -23,13 +23,13 @@ export function Footer() {
               The Delta State Private Public Property Protection Agency is dedicated to safeguarding assets, ensuring public trust, and upholding property rights for all citizens.
             </p>
             <div className="flex gap-4 pt-2">
-              <Link href="#" className="p-2 bg-slate-900 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+              <Link href="#" className="p-2 bg-blue-950 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-slate-900 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+              <Link href="#" className="p-2 bg-blue-950 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-slate-900 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+              <Link href="#" className="p-2 bg-blue-950 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                 <Linkedin className="h-5 w-5" />
               </Link>
             </div>
@@ -53,7 +53,7 @@ export function Footer() {
                <li><Link href="/services" className="hover:text-blue-400 transition-colors">Property Registry</Link></li>
                <li><Link href="/report" className="hover:text-blue-400 transition-colors">Report Violation</Link></li>
                <li><Link href="/rights" className="hover:text-blue-400 transition-colors">Legal Assistance</Link></li>
-               <li><Link href="/verify" className="hover:text-blue-400 transition-colors">Verify Title</Link></li>
+               {/*<li><Link href="/verify" className="hover:text-blue-400 transition-colors">Verify Title</Link></li>*/}
              </ul>
           </div>
 

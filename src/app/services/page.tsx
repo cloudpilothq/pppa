@@ -44,7 +44,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-background min-h-screen pb-16">
       {/* Hero Header */}
-      <div className="relative bg-slate-900 text-white py-24 overflow-hidden mb-16">
+      <div className="relative bg-blue-950 text-white py-24 overflow-hidden mb-16">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
@@ -81,7 +81,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        <div className="mt-20 bg-slate-900 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl relative overflow-hidden">
+        <div className="mt-20 bg-blue-950 rounded-2xl p-8 md:p-12 text-center text-white shadow-xl relative overflow-hidden">
           {/* Subtle background decoration */}
           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
           <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>

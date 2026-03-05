@@ -29,7 +29,7 @@ export default function PartnershipsPage() {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-slate-900 rounded-2xl p-8 md:p-16 text-center text-white relative overflow-hidden">
+        <div className="bg-blue-950 rounded-2xl p-8 md:p-16 text-center text-white relative overflow-hidden">
            <div className="absolute top-0 right-0 p-32 bg-blue-500/10 rounded-full blur-3xl"></div>
            <div className="absolute bottom-0 left-0 p-32 bg-blue-500/10 rounded-full blur-3xl"></div>
            
