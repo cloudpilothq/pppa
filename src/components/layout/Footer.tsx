@@ -4,7 +4,7 @@ import { Shield, Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide
 
 export function Footer() {
   return (
-    <footer className="bg-blue-950 text-slate-300 border-t border-blue-900">
+    <footer className="bg-blue-900 text-slate-300 border-t border-blue-900">
       <div className="container mx-auto py-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
@@ -23,13 +23,13 @@ export function Footer() {
               The Delta State Private Public Property Protection Agency is dedicated to safeguarding assets, ensuring public trust, and upholding property rights for all citizens.
             </p>
             <div className="flex gap-4 pt-2">
-              <Link href="#" className="p-2 bg-blue-950 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+              <Link href="#" className="p-2 bg-blue-900 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-blue-950 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+              <Link href="#" className="p-2 bg-blue-900 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="p-2 bg-blue-950 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
+              <Link href="#" className="p-2 bg-blue-900 rounded-full hover:bg-blue-600 hover:text-white transition-all text-slate-400">
                 <Linkedin className="h-5 w-5" />
               </Link>
             </div>

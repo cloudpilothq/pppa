@@ -11,19 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        blue: {
-          50: '#eef8ff',
-          100: '#d9efff',
-          200: '#bae2ff',
-          300: '#8ccfff',
-          400: '#56b3ff',
-          500: '#2b91ff',
-          600: '#225283', // Navy Blue from logo: #225283
-          700: '#1c446f',
-          800: '#17395d',
-          900: '#132e4d',
-          950: '#0e2d48',
-        },
+
         amber: {
           50: '#fbf9f4',
           100: '#f5f0e3',

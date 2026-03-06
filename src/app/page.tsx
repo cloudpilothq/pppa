@@ -147,7 +147,7 @@ export default function HomePage() {
               </p>
               <Link 
                 href="/about" 
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-blue-950 rounded-lg hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 group"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-blue-900 rounded-lg hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 group"
               >
                 Continue Reading
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

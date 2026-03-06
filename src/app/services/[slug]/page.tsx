@@ -169,7 +169,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   return (
     <div className="bg-background min-h-screen pb-16">
       {/* Hero Section */}
-      <div className="relative bg-blue-950 text-white min-h-[400px] flex items-center overflow-hidden">
+      <div className="relative bg-blue-900 text-white min-h-[400px] flex items-center overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
