@@ -22,6 +22,9 @@ if (fs.existsSync(oldNext)) {
 
 // 2. Walk through all files and replace /_next/ with /assets/
 function walkAndReplace(dir) {
+  // CRITICAL: NEVER traverse outside 'out' dir
+  if (!dir.includes(path.join(__dirname, 'out'))) return;
+
   const files = fs.readdirSync(dir);
   for (const file of files) {
     const filePath = path.join(dir, file);
@@ -33,17 +36,23 @@ function walkAndReplace(dir) {
       const ext = path.extname(file);
       if (['.html', '.js', '.css', '.json', '.txt', '.xml', '.svg'].includes(ext)) {
         let content = fs.readFileSync(filePath, 'utf8');
+        let changed = false;
         if (content.includes('/_next/')) {
           content = content.replace(/\/_next\//g, '/assets/');
-          fs.writeFileSync(filePath, content, 'utf8');
+          changed = true;
         }
         if (content.includes('\\"_next\\/')) {
             content = content.replace(/\\\"_next\\\//g, '\\"assets\\/');
-            fs.writeFileSync(filePath, content, 'utf8');
+            changed = true;
         }
          // Also replace references that Next.js might store without prefixes
          if (content.includes('"/_next/')) {
            content = content.replace(/"\/_next\//g, '"/assets/');
+           changed = true;
+        }
+        
+        // ONLY write if changed to prevent file corruption
+        if (changed) {
            fs.writeFileSync(filePath, content, 'utf8');
         }
       }
@@ -51,6 +60,6 @@ function walkAndReplace(dir) {
   }
 }
 
-console.log('Replacing references...');
+console.log('Replacing references limit to outDir...');
 walkAndReplace(outDir);
 console.log('Post-build replacements complete!');

@@ -89,7 +89,7 @@ export default function HomePage() {
               },
             ].map((item, idx) => (
               <Link key={idx} href={item.link} className="group block h-full">
-                <div className={`bg-amber-50 p-8 rounded-2xl shadow-xl border border-amber-100/50 ${item.border} transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 h-full flex flex-col`}>
+                <div className={`bg-white p-8 rounded-2xl shadow-xl border border-slate-100 ${item.border} transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 h-full flex flex-col`}>
                   <div className={`w-16 h-16 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center mb-6 transition-transform group-hover:scale-110`}>
                     <item.icon className="h-8 w-8" />
                   </div>
