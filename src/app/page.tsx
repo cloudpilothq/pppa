@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-blue-500 rounded-full filter blur-3xl opacity-20"></div>
           <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-blue-400 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
+          <div className="absolute inset-0 bg-grid opacity-10 bg-center"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -270,7 +270,7 @@ export default function HomePage() {
       <section className="relative py-24 bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/10 rounded-full filter blur-3xl"></div>
-          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 bg-center"></div>
+          <div className="absolute inset-0 bg-grid opacity-10 bg-center"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -318,4 +318,6 @@ export default function HomePage() {
     </div>
   );
 }
+
+
 
