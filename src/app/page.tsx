@@ -52,9 +52,89 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Governor's Message Section */}
+      <section className="bg-amber-50 border-b border-amber-200 py-16 relative z-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto bg-white rounded-3xl p-8 md:p-12 border border-amber-200 shadow-xl shadow-amber-900/5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+              <Shield className="w-64 h-64 text-amber-900" />
+            </div>
+            
+            <div className="relative z-10">
+              <div className="inline-block mb-6">
+                <span className="bg-red-100 text-red-700 text-sm font-bold px-4 py-2 rounded-full border border-red-200 uppercase tracking-wide inline-flex items-center gap-2">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                  </span>
+                  Delta people, una don hear?
+                </span>
+              </div>
+              
+              <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-8 leading-snug">
+                OUR GOVERNOR, RT. HON ELDER SHERIFF OBOREVWORI DON PROVIDE SECURITY FOR EVERYBODY WEN DE DEVELOP LAND FOR DELTA STATE TO PROTECT THEM FROM:
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                {[
+                  "ILLEGAL LEVIES / COLLECTIONS",
+                  "HARRASSMENT / MOLESTATION IN THE HANDS OF BAD PEOPLE WEN DEY COMMUNITY",
+                  "People wey Dey demand money before you fit work",
+                  "FORCING LABOURERS MAKE THEM JOIN COMMUNITY UNION BEFORE them fit WORK."
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <div className="flex-shrink-0 w-8 h-8 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <p className="font-semibold text-slate-800 leading-tight pt-1 text-sm md:text-base">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="bg-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-lg mb-8 relative overflow-hidden">
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold mb-4 text-amber-400">
+                    Your hustle no be crime. You sef deserve respect.
+                  </h3>
+                  <p className="text-base md:text-lg leading-relaxed mb-6 font-medium text-slate-300">
+                    WENEVER ANYONE DEY HAPPEN TO YOU OR FOR YOUR SITE, RUN COME OFFICE WEN DEM DEY CALL <strong className="text-white">PUBLIC AND PRIVATE PROPERTY PROTECTION AGENCY</strong>
+                  </p>
+                  
+                  <div className="flex flex-col md:flex-row gap-4 mb-6">
+                    <div className="flex-1 bg-slate-800 p-4 rounded-xl border border-slate-700">
+                      <div className="text-amber-400 text-xs font-bold uppercase mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-amber-400 rounded-full"></div> Asaba Office</div>
+                      <p className="text-sm leading-snug text-slate-300">Old ministry and information complex, Emmanuel Uduaghan way aka summit road for ASABA</p>
+                    </div>
+                    <div className="flex-1 bg-slate-800 p-4 rounded-xl border border-slate-700">
+                      <div className="text-amber-400 text-xs font-bold uppercase mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-amber-400 rounded-full"></div> Effurun Office</div>
+                      <p className="text-sm leading-snug text-slate-300">Plot 630, Kestin Pondi Street, off night street DDPA Housing Estate where Dey for Ugborikoko, Effurun</p>
+                    </div>
+                  </div>
 
+                  <div className="flex flex-col sm:flex-row items-center gap-4 text-lg font-bold text-white bg-slate-800/50 p-4 rounded-xl border border-slate-700 justify-center">
+                    <span>Call:</span>
+                    <a href="tel:08038698931" className="hover:text-amber-400 transition-colors">0803 869 8931</a>
+                    <span className="text-slate-600 hidden sm:inline">|</span>
+                    <a href="tel:08032716295" className="hover:text-amber-400 transition-colors">0803 271 6295</a>
+                    <span className="text-slate-600 hidden sm:inline">|</span>
+                    <a href="tel:08130247913" className="hover:text-amber-400 transition-colors">0813 024 7913</a>
+                  </div>
+                </div>
+              </div>
 
-      {/* Quick Access Grid */}
+              <div className="flex items-center justify-center">
+                <div className="bg-green-50 text-green-800 px-8 py-4 rounded-xl font-bold border border-green-200 shadow-sm text-center text-lg md:text-xl">
+                  No fear. Work freely. Gov sheriff dey behind you.
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Access Grid */}
       <section className="py-20 relative z-20">
         <div className="container mx-auto px-4">
