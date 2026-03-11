@@ -72,15 +72,15 @@ export default function HomePage() {
               </div>
               
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-8 leading-snug">
-                OUR GOVERNOR, RT. HON ELDER SHERIFF OBOREVWORI DON PROVIDE SECURITY FOR EVERYBODY WEN DE DEVELOP LAND FOR DELTA STATE TO PROTECT THEM FROM:
+                Our Governor, RT. Hon. Elder Sherif Oborevwori don Provide Security for everybody weh dey Develop Land for Delta State to Protect them from:
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 {[
-                  "ILLEGAL LEVIES / COLLECTIONS",
-                  "HARRASSMENT / MOLESTATION IN THE HANDS OF BAD PEOPLE WEN DEY COMMUNITY",
-                  "People wey Dey demand money before you fit work",
-                  "FORCING LABOURERS MAKE THEM JOIN COMMUNITY UNION BEFORE them fit WORK."
+                  "Illegal Levies / Collections",
+                  "Harrasment / Molestation in the Hands of Bad People weh dey Community",
+                  "People wey dey demand money before you fit work",
+                  "Forcing Labourers make them join Community Union before them fit work."
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
                     <div className="flex-shrink-0 w-8 h-8 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold text-sm">
@@ -99,17 +99,17 @@ export default function HomePage() {
                     Your hustle no be crime. You sef deserve respect.
                   </h3>
                   <p className="text-base md:text-lg leading-relaxed mb-6 font-medium text-slate-300">
-                    WENEVER ANYONE DEY HAPPEN TO YOU OR FOR YOUR SITE, RUN COME OFFICE WEN DEM DEY CALL <strong className="text-white">PUBLIC AND PRIVATE PROPERTY PROTECTION AGENCY</strong>
+                    Which one dey happen to you OR na for your site, make you run come office weh dem dey call <strong className="text-white">Delta State Public and Private Property Protection Agency</strong>
                   </p>
                   
                   <div className="flex flex-col md:flex-row gap-4 mb-6">
                     <div className="flex-1 bg-slate-800 p-4 rounded-xl border border-slate-700">
                       <div className="text-amber-400 text-xs font-bold uppercase mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-amber-400 rounded-full"></div> Asaba Office</div>
-                      <p className="text-sm leading-snug text-slate-300">Old ministry and information complex, Emmanuel Uduaghan way aka summit road for ASABA</p>
+                      <p className="text-sm leading-snug text-slate-300">Old Ministry and Information Complex, Emmanuel Uduaghan way aka Summit Road for ASABA</p>
                     </div>
                     <div className="flex-1 bg-slate-800 p-4 rounded-xl border border-slate-700">
                       <div className="text-amber-400 text-xs font-bold uppercase mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-amber-400 rounded-full"></div> Effurun Office</div>
-                      <p className="text-sm leading-snug text-slate-300">Plot 630, Kestin Pondi Street, off night street DDPA Housing Estate where Dey for Ugborikoko, Effurun</p>
+                      <p className="text-sm leading-snug text-slate-300">Plot 630, Kestin Pondi Street, Off Night Street DDPA Housing Estate wey dey for Ugborikoko, Effurun</p>
                     </div>
                   </div>
 
@@ -126,7 +126,7 @@ export default function HomePage() {
 
               <div className="flex items-center justify-center">
                 <div className="bg-green-50 text-green-800 px-8 py-4 rounded-xl font-bold border border-green-200 shadow-sm text-center text-lg md:text-xl">
-                  No fear. Work freely. Gov sheriff dey behind you.
+                  No Fear. Work Freely. Governor Sheriff dey behind you.
                 </div>
               </div>
               
