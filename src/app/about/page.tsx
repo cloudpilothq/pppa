@@ -57,7 +57,7 @@ export default function AboutPage() {
           </div>
           <div className="w-full aspect-[21/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-lg relative">
             <img 
-              src="https://images.unsplash.com/photo-1620000486849-0d86e58fbe54?q=80&w=2670&auto=format&fit=crop" 
+              src="/about_headquarters.png" 
               alt="PPPPA Office Building" 
               className="w-full h-full object-cover"
             />
