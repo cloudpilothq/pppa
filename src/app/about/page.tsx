@@ -84,24 +84,24 @@ export default function AboutPage() {
             {/* Left Image */}
             <div className="flex-1 rounded-[24px] overflow-hidden shadow-lg h-[25%] md:h-[65%] md:self-center relative">
                <img 
-                src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=800&auto=format&fit=crop" 
-                alt="Facility" 
+                src="/legal_enforcement.png" 
+                alt="Legal Enforcement" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
             {/* Center Image */}
             <div className="flex-[2] rounded-[24px] overflow-hidden shadow-xl h-[50%] md:h-full relative z-10 md:scale-105">
                <img 
-                src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=1400&auto=format&fit=crop" 
-                alt="Construction Site" 
+                src="/secure_construction.png" 
+                alt="Secure Construction Site" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
             {/* Right Image */}
             <div className="flex-1 rounded-[24px] overflow-hidden shadow-lg h-[25%] md:h-[65%] md:self-center relative">
                <img 
-                src="https://images.unsplash.com/photo-1585863980140-5e608de120dd?q=80&w=800&auto=format&fit=crop" 
-                alt="Landscape" 
+                src="/community_engagement.png" 
+                alt="Community Engagement" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
