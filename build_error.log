@@ -1,0 +1,78 @@
+﻿Γû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 11.0s
+  Running TypeScript ...
+node.exe : Failed to 
+compile.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Users\HP\AppData\Ro
+aming\npm ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Failed to com   
+ pile.:String) [],     
+RemoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+
+.next/dev/types/validat
+or.ts:204:39
+Type error: File 'C:/Us
+ers/HP/Desktop/ppppa_si
+te/src/app/news/asaba-w
+aterfront-city-govt-war
+ns-against-illegal-stru
+ctures/page.tsx' is 
+not a module.
+
+[0m [90m 202 |[39m {
+ [90m 203 |[39m   
+type __IsExpected[33m<
+[39m[33mSpecific[39m
+ [36mextends[39m [33
+mAppPageConfig[39m[33
+m<[39m[32m"/news/asab
+a-waterfront-city-govt-
+warns-against-illegal-s
+tructures"[39m[33m>>
+[39m [33m=[39m 
+[33mSpecific[39m
+[31m[1m>[22m[39m[9
+0m 204 |[39m   
+[36mconst[39m 
+handler [33m=[39m {} 
+[36mas[39m 
+[36mtypeof[39m [36mi
+mport[39m([32m"../../
+../src/app/news/asaba-w
+aterfront-city-govt-war
+ns-against-illegal-stru
+ctures/page.js"[39m)
+ [90m     |[39m      
+                       
+          
+[31m[1m^[22m[39m
+ [90m 205 |[39m   
+type __Check 
+[33m=[39m __IsExpecte
+d[33m<[39m[36mtypeof
+[39m 
+handler[33m>[39m
+ [90m 206 |[39m   
+[90m// @ts-ignore[39m
+ [90m 207 |[39m   
+type __Unused 
+[33m=[39m __Check[0m
+Next.js build worker 
+exited with code: 1 
+and signal: null
