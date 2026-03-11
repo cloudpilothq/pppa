@@ -35,7 +35,7 @@ export default function AboutPage() {
         <section>
           <div className="w-full aspect-[21/10] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-lg relative">
             <img 
-              src="https://images.unsplash.com/photo-1519508502390-1cfa9768cdcb?q=80&w=2670&auto=format&fit=crop" 
+              src="/landscape.jpg" 
               alt="Delta State Landscape" 
               className="w-full h-full object-cover"
             />
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 { name: "Barr. Reuben Onojewho", title: "Director of Legal", img: "/leadership/Barr. Reuben Onojewho.jpg" },
                 { name: "Mr. Ashiponu Yemi Kenneth", title: "Director of Operations", img: "/leadership/Atseponu Yemi Kenneth.jpg" },
                 { name: "Mr. Godswill Omonuku", title: "Director of Administration", img: "/leadership/Godswill Omonuku.jpg" },
-                { name: "Mr. Efe Akpokiniovo", title: "SSA", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" },
+                { name: "Mr. Efe Akpokiniovo", title: "SSA"},
                 { name: "Mrs. Elo-Oghene Enakpodia", title: "Programme Analyst", img: "/leadership/Mrs. Elo-Oghene Enakpodia.jpg" },
               ].map((person, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center">
