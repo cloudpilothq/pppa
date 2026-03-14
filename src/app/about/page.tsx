@@ -121,7 +121,7 @@ export default function AboutPage() {
                 { name: "Barr. Reuben Onojewho", title: "Director of Legal", img: "/leadership/Barr. Reuben Onojewho.jpg" },
                 { name: "Mr. Ashiponu Yemi Kenneth", title: "Director of Operations", img: "/leadership/Atseponu Yemi Kenneth.jpg" },
                 { name: "Mr. Godswill Omonuku", title: "Director of Administration", img: "/leadership/Godswill Omonuku.jpg" },
-                { name: "Mr. Efe Akpokiniovo", title: "SSA"},
+               //{ name: "Mr. Efe Akpokiniovo", title: "SSA"},
                 { name: "Mrs. Elo-Oghene Enakpodia", title: "Programme Analyst", img: "/leadership/Mrs. Elo-Oghene Enakpodia.jpg" },
               ].map((person, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center">
