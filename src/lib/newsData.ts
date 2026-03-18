@@ -10,6 +10,29 @@ export interface NewsItem {
 
 export const FACTUAL_NEWS: NewsItem[] = [
   { 
+    id: 7, 
+    slug: "ds-pppa-partners-with-nigeria-police-effurun",
+    title: "DS-PPPA Partners with Nigeria Police to Eradicate Illegal \"Deve\" Levies in Effurun", 
+    summary: "In a strategic move to sanitize the property development sector in Delta State, the Director-General of the Delta State Public and Private Properties Protection Agency (DS-PPPA) led a high-powered delegation on a courtesy visit to the Area Commander of the Nigeria Police, Effurun Area Command.", 
+    date: "2026-03-14", 
+    image: "/news/news_anti_deve_law_1772545928184.png",
+    content: [
+      "In a strategic move to sanitize the property development sector in Delta State, the Director-General of the Delta State Public and Private Properties Protection Agency (DS-PPPA) led a high-powered delegation on a courtesy visit to the Area Commander of the Nigeria Police, Effurun Area Command.",
+      "The visit marks a critical step in the Agency’s mission to enforce the Delta State Public and Private Properties Protection Law 2018, which prohibits the collection of \"deve\" or any unauthorized development levies across the state’s 25 Local Government Areas.",
+      "Strengthening Enforcement and Security",
+      "During the successful engagement, the Director-General emphasized that while the Agency remains committed to its mandate, the collaboration with the Nigeria Police is essential for effective enforcement.",
+      "\"We recognize the indispensable service the Police Force provides,\" the DG stated. \"To truly protect developers from intimidation and extortion, our operations must align with the constitutional backing and rapid response capabilities of the Effurun Area Command.\"",
+      "The collaboration aims to establish a robust framework for:",
+      "Joint Enforcement Exercises: Targeted operations to clear construction sites of illegal \"deve\" collectors.",
+      "Arrest and Prosecution: Streamlining the process for bringing violators of the 2018 Law to justice.",
+      "Rapid Response Mechanism: Ensuring developers facing harassment on-site receive immediate protection.",
+      "Zero Tolerance for Extortion",
+      "The Agency reminds the general public and all community associations that the 2018 Law remains in full effect. The Area Commander expressed full support for the Agency’s initiative, pledging the Command's readiness to provide the necessary security cover to ensure that property development in the Effurun axis proceeds without obstruction or illegal interference.",
+      "A Message to Developers",
+      "The DS-PPPA encourages all property developers in the state to report any incidents of harassment or demands for \"deve\" to the Agency immediately. With this new partnership, the Agency is better equipped than ever to protect your investments and uphold the rule of law."
+    ]
+  },
+  { 
     id: 1, 
     slug: "delta-assembly-proposes-tenant-law-2025",
     title: "Delta Assembly Proposes State Landlord and Tenant Law 2025", 
