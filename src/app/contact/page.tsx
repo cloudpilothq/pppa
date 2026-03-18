@@ -110,7 +110,8 @@ export default function ContactPage() {
                     <div className="space-y-3">
                       <h4 className="font-bold text-slate-900 text-xl border-b border-slate-100 pb-2">Asaba Office</h4>
                       <div className="text-slate-600 leading-relaxed text-[15px] space-y-1">
-                        <p className="font-medium">[Address to be confirmed]</p>
+                        <p className="font-medium">Ground Floor,</p> <p>Old Ministry and Information Complex,</p>
+                        <p>Summit Road, Asaba.</p>
                       </div>
                       <div className="pt-2 space-y-2 text-[15px]">
                         <p className="flex items-center gap-2 text-slate-700">
