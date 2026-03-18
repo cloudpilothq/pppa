@@ -79,7 +79,7 @@ export function Footer() {
 
         <div className="border-t border-blue-900 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
           <p>© {new Date().getFullYear()} DSPPPPA. All rights reserved.</p>
-          <p>Site designed by <a href="https://github.com/cloudpilothq" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white transition-colors font-medium">CloudPilotHQ</a></p>
+          <p>Designed By <a href="https://github.com/cloudpilothq" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white transition-colors font-medium">CloudPilotHQ</a></p>
           <div className="flex gap-8">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
