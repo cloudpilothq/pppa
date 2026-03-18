@@ -75,13 +75,13 @@ export default function HomePage() {
               </div>
               
               <h2 className="text-xl md:text-2xl font-extrabold text-slate-900 mb-8 leading-snug">
-                Our Governor, RT. Hon. Elder Sherif Oborevwori don Provide Security for everybody weh dey Develop Land for Delta State to Protect them from:
+                Our Governor, His Excellency RT. Hon. Elder Sherif Oborevwori don Provide Security for everybody weh dey Develop Land for Delta State to Protect them from:
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 {[
-                  "Illegal Levies / Collections",
-                  "Harrasment / Molestation in the Hands of Bad People weh dey Community",
+                  "Illegal Levies and Collections",
+                  "Harrasment and Molestation in the Hands of Bad People weh dey Community",
                   "People wey dey demand money before you fit work",
                   "Forcing Labourers make them join Community Union before them fit work."
                 ].map((item, index) => (
@@ -386,18 +386,18 @@ export default function HomePage() {
 
 
       {/* Partners Banner */}
-      <section className="py-12 bg-white border-t border-slate-100">
+     {/* <section className="py-12 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-8">Trusted by Strategic Partners</p>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
              {/* Placeholders for logos */}
-             <div className="text-xl font-bold text-slate-700">GOV.CORP</div>
+            {/* <div className="text-xl font-bold text-slate-700">GOV.CORP</div>
              <div className="text-xl font-bold text-slate-700">SECURE.IO</div>
              <div className="text-xl font-bold text-slate-700">CITY WIDE</div>
-             <div className="text-xl font-bold text-slate-700">ASSET GUARD</div>
-          </div>
+             <div className="text-xl font-bold text-slate-700">ASSET GUARD</div> */}
+         {/* </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
