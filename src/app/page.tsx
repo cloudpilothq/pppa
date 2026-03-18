@@ -81,9 +81,9 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 {[
                   "Illegal Levies and Collections",
-                  "Harrasment and Molestation in the Hands of Bad People weh dey Community",
+                  "Harrasment and Molestation for the hands of bad people wey dey community",
                   "People wey dey demand money before you fit work",
-                  "Forcing Labourers make them join Community Union before them fit work."
+                  "Forcing labourers make them join community union before them fit work."
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
                     <div className="flex-shrink-0 w-8 h-8 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold text-sm">
@@ -102,7 +102,7 @@ export default function HomePage() {
                     Your hustle no be crime. You sef deserve respect.
                   </h3>
                   <p className="text-base md:text-lg leading-relaxed mb-6 font-medium text-slate-300">
-                    Which one dey happen to you OR na for your site, make you run come office weh dem dey call <strong className="text-white">Delta State Public and Private Property Protection Agency</strong>
+                    Which one dey happen to you OR na for your site, make you run come office wey dem dey call <strong className="text-white">Delta State Public and Private Property Protection Agency</strong>
                   </p>
                   
                   <div className="flex flex-col md:flex-row gap-4 mb-6">
