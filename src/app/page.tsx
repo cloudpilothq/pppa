@@ -53,12 +53,15 @@ export default function HomePage() {
       </section>
 
       {/* Governor's Message Section */}
-      <section className="bg-amber-50 border-b border-amber-200 py-16 relative z-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto bg-white rounded-3xl p-8 md:p-12 border border-amber-200 shadow-xl shadow-amber-900/5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+      <section className="relative z-20 py-16 min-h-screen flex items-center bg-cover bg-center border-b border-amber-200" style={{ backgroundImage: "url('/about_headquarters.png')" }}>
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px]"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto bg-transparent rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-4 pointer-events-none">
               <Shield className="w-64 h-64 text-amber-900" />
             </div>
+
+
             
             <div className="relative z-10">
               <div className="inline-block mb-6">
