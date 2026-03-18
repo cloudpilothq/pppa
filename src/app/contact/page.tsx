@@ -88,11 +88,12 @@ export default function ContactPage() {
                       <div className="pt-2 space-y-2 text-[15px]">
                         <p className="flex items-center gap-2 text-slate-700">
                           <Phone className="h-4 w-4 text-slate-400" />
-                          <span className="font-medium text-slate-900">Tel:</span> [to be confirmed]
+                          <span className="font-medium text-slate-900">Tel:</span> 
+                          0803 869 8931 | 0803 271 6295 | 0813 024 7913
                         </p>
                         <p className="flex items-center gap-2 text-slate-700">
                           <Mail className="h-4 w-4 text-slate-400" />
-                          <span className="font-medium text-slate-900">Email:</span> [to be confirmed]
+                          <span className="font-medium text-slate-900">Email:</span> [EMAIL_ADDRESS]
                         </p>
                         <p className="flex items-center gap-2 text-slate-700 pt-1">
                           <Clock className="h-4 w-4 text-blue-500" />
