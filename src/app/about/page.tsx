@@ -117,16 +117,16 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-16">
               {[
                 { name: "Hon. Gibson Akporehe", title: "Director General", img: "/leadership/Hon. Gibson Akporehe.jpg" },
-                { name: "Ms. Efemena Igbrude", title: "Director of Finance", img: "/leadership/Ms. Efemena Igbrude.jpg" },
+                { name: "Ms. Efemena Igbrude", title: "Chief Accountant", img: "/leadership/Ms. Efemena Igbrude.jpg", wideImg: true },
                 { name: "Barr. Reuben Onojewho", title: "Director of Legal", img: "/leadership/Barr. Reuben Onojewho.jpg" },
                 { name: "Mr. Ashiponu Yemi Kenneth", title: "Director of Operations", img: "/leadership/Atseponu Yemi Kenneth.jpg" },
                 { name: "Mr. Godswill Omonuku", title: "Director of Administration", img: "/leadership/Godswill Omonuku.jpg" },
-               //{ name: "Mr. Efe Akpokiniovo", title: "SSA"},
+                { name: "Mrs. Roseline Eferaye", title: "Administration", img: "/leadership/Mrs. Roseline Eferaye.jpg" },
                 { name: "Mrs. Elo-Oghene Enakpodia", title: "Programme Analyst", img: "/leadership/Mrs. Elo-Oghene Enakpodia.jpg" },
               ].map((person, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center">
-                  <div className="w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden shadow border-4 border-white mb-4 bg-slate-200">
-                    <img src={person.img} alt={person.name} className="w-full h-full object-cover object-top" />
+                  <div className={`${'wideImg' in person && person.wideImg ? 'w-36 h-36 md:w-52 md:h-52' : 'w-28 h-28 md:w-40 md:h-40'} rounded-full overflow-hidden shadow border-4 border-white mb-4 bg-slate-200`}>
+                    <img src={person.img} alt={person.name} className={`w-full h-full object-cover ${'wideImg' in person && person.wideImg ? 'object-center' : 'object-top'}`} />
                   </div>
                   <h3 className="font-bold text-slate-800 text-[14px] md:text-[16px] leading-tight mb-1">
                     {person.name}

@@ -13,13 +13,21 @@ const DEMO_LEADERS = [
   {
     id: 2,
     name: "Ms. Efemena Igbrude",
-    role: "Director of Finance",
+    role: "Chief Accountant",
     bio: "Ms. Igbrude brings her top notch experience in finance and accounting. She leads the agency's financial operations, ensuring that the agency's resources are used effectively and efficiently.",
     icon: <Award className="h-16 w-16" />,
     image: "/leadership/Ms. Efemena Igbrude.jpg"
   },
   {
     id: 3,
+    name: "Mrs. Roseline Eferaye",
+    role: "Administration",
+    bio: "Mrs. Eferaye is a seasoned administrator with extensive experience in organizational planning and development. In her role, she oversees the agency's administrative operations, directing the effective and efficient allocation of resources to drive institutional goals and deliver impactful outcomes.",
+    icon: <Award className="h-16 w-16" />,
+    image: "/leadership/Mrs. Roseline Eferaye.jpg"
+  },
+  {
+    id: 4,
     name: "Barr. Reuben Onojewho",
     role: "Director of Legal",
     bio: "Barr. Onojewho oversees the agency's legal framework and enforcement strategies. With his extensive experience in property law and public policy, he guides the prosecution of property rights violators, ensures statutory compliance across all operations, and provides critical legal counsel to protect landowners in Delta State.",
@@ -27,7 +35,7 @@ const DEMO_LEADERS = [
     image: "/leadership/Barr. Reuben Onojewho.jpg"
   },
   {
-    id: 4,
+    id: 5,
     name: "Mr. Ashiponu Yemi Kenneth",
     role: "Director of Operations",
     bio: "Mr. Ashiponu coordinates the on-ground task forces deployed across Warri, Asaba, and other key development hubs. His expertise in construction and site management ensures that field operations are handled professionally and safely.",
@@ -35,7 +43,7 @@ const DEMO_LEADERS = [
     image: "/leadership/Atseponu Yemi Kenneth.jpg"
   },
   {
-    id: 7,
+    id: 6,
     name: "Mr. Godswill Omonuku",
     role: "Director of Administration",
     bio: "Mr. Omonuku manages the agency's internal functions and administrative operations, ensuring a seamless and efficient workflow. He oversees human resources, facility management, and inter-departmental coordination, providing the essential support structure that enables the DSPPPPA to effectively fulfill its mandate.",
@@ -43,14 +51,14 @@ const DEMO_LEADERS = [
     image: "/leadership/Godswill Omonuku.jpg"
   },
   {
-    id: 5,
+    id: 7,
     name: "Mr. Efe Akpokiniovo",
     role: "SSA",
     bio: "Mr. Akpokiniovo manages the agency's communications, ensuring the public is educated about their property rights. He leads community town halls and develops campaigns that encourage citizens to report unlawful disruptions.",
     icon: <UserCheck className="h-16 w-16" />
   },
   {
-    id: 6,
+    id: 8,
     name: "Mrs. Elo-Oghene Enakpodia",
     role: "Programme Analyst",
     bio: "As the agency's Programme Analyst, Mrs. Enakpodia evaluates the impact of strategic initiatives and operations. She analyzes data from citizen reports and community engagements to develop actionable insights, ensuring the DSPPPPA's policies effectively protect property rights and reduce unlawful disruptions.",
